@@ -11,6 +11,8 @@
         <div class="alert alert-error" role="alert">{{ message|raw }}</div>
     {% endfor %}
 
+    <a href="{{ path('admin_category_create') }}">Créer une catégorie</a>
+
     <ul>
     {% for category in categories %}
         <li><a href="{{ path('admin_category_edit', {slug: category.slug}) }}">{{ category.label }}</a></li>

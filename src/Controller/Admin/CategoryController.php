@@ -40,4 +40,54 @@ class CategoryController extends AbstractController
             'categories' => $categories
         ]);
     }
+
+    /**
+     * @Route("/admin/category/create", name="admin_category_create")
+     * @Route("/admin/category/edit/{slug}", name="admin_category_edit")
+     */
+    public function edit(
+        Request $request,
+        CategoryRepository $categoryRepository,
+        string $slug = null
+    ): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $return = null;
+
+        ($isNew = $slug === null)
+            ? $category = new Category()
+            : $category = $categoryRepository->findOneBy(['slug' => $slug]);
+
+        if (!$category) {
+            $this->addFlash('error', 'La catégorie <strong>' . $slug . '</strong> n\'existe pas');
+
+            $return = $this->redirectToRoute('admin_category_list');
+        }
+
+        $form = $this->createForm(CategoryType::class, $category);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            try {
+                $this->em->persist($category);
+                $this->em->flush();
+                $this->addFlash('success', 'La catégorie <strong>' . $category->getLabel() . '</strong> a bien été créée.');
+                $return = $this->redirectToRoute('admin_category_list');
+            } catch (\Exception $exception) {
+                $this->logger->error($exception->getMessage());
+                $this->logger->debug($exception->getTraceAsString());
+
+                $this->addFlash('error', 'Un problème est survenu, la catégorie n\'a pas été créée !');
+                $return = $this->redirectToRoute('admin_category_list');
+            }
+        }
+
+        return $return === null
+            ? $this->render('admin/category/edit.html.twig', [
+                'form' => $form->createView(),
+                'pageTitlePrefix' => $isNew ? 'Création' : 'Édition',
+            ])
+            : $return;
+    }
 }
