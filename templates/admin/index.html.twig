@@ -3,9 +3,10 @@
 {% block body %}
     <h2>Panneau d'admin</h2>
 
-    <p>Ici tu peux :</p>
-    <ul>
-        <li><a>Créer une catégorie</a></li>
-        <li><a>Créer un anti passoire</a></li>
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="{{ path('admin_category_list') }}">Categories</a></li>
+            <li><a>Anti passoire</a>></li>
+        </ul>
+    </nav>
 {% endblock %}
