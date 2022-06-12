@@ -1,13 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Anti Passoire{% endblock %}
 
 {% block body %}
-
-<body>
-    <h1>Anti Passoire</h1>
-    <a href="{{ path('app_login') }}">Connexion</a>
-
     {# Le champ de recherche d'anti passoire par mots clés#}
     {{ form(form) }}
 
@@ -18,5 +13,4 @@
             <li>T'as encore oublié un truc ? Fais une recherche !</li>
         {% endfor %}
     </ul>
-</body>
 {% endblock %}

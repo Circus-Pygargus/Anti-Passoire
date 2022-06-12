@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Ajout de CKEditor 4 contenant un code snippets">
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[HTML] Réarrangement structure du site">
+      <change afterPath="$PROJECT_DIR$/templates/admin/_layouts/flash_message.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/antipassoire/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/antipassoire/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/category/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reset_password/request.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reset_password/request.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -395,6 +400,7 @@
     <MESSAGE value="[FORMTYPE] Création de SearchAntiPassoireType" />
     <MESSAGE value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
     <MESSAGE value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
+    <MESSAGE value="[HTML] Réarrangement structure du site" />
+    <option name="LAST_COMMIT_MESSAGE" value="[HTML] Réarrangement structure du site" />
   </component>
 </project>

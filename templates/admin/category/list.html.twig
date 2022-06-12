@@ -1,15 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base.html.twig' %}
 
 {% block body %}
     <h2>Liste des catégories</h2>
 
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success" role="alert">{{ message|raw }}</div>
-    {% endfor %}
-
-    {% for message in app.flashes('error') %}
-        <div class="alert alert-error" role="alert">{{ message|raw }}</div>
-    {% endfor %}
+    {% include 'admin/_layouts/flash_message.html.twig' %}
 
     <a href="{{ path('admin_category_create') }}">Créer une catégorie</a>
 

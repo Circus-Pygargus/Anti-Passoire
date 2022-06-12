@@ -3,10 +3,9 @@
 {% block title %}Modification du mot de passe{% endblock %}
 
 {% block body %}
-    {% for flashError in app.flashes('reset_password_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
     <h1>Mot de passe oublié ?</h1>
+
+    {% include 'admin/_layouts/flash_message.html.twig' %}
 
     {{ form_start(requestForm, {
         'attr': {

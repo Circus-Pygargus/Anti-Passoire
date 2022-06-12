@@ -3,12 +3,9 @@
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-    {% for message in app.flashes('success') %}
-        <div class="alert  alert-success" role="alert">{{ message }}</div>
-    {% endfor %}
+    <h2 class="h3 mb-3 font-weight-normal">Se connecter</h2>
 
-
-    <h1 class="h3 mb-3 font-weight-normal">Se connecter</h1>
+    {% include 'admin/_layouts/flash_message.html.twig' %}
 
     {% if app.user %}
         <div class="mb-3">
