@@ -8,5 +8,15 @@
     <h1>Anti Passoire</h1>
     <a href="{{ path('app_login') }}">Connexion</a>
 
+    {# Le champ de recherche d'anti passoire par mots clés#}
+    {{ form(form) }}
+
+    {% if antiPassoires is not empty %}
+        <ul>
+        {% for antiPassoire in antiPassoires %}
+            <li>{{ antiPassoire.title }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 </body>
 {% endblock %}
