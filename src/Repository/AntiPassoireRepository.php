@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\AntiPassoire;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -37,6 +38,23 @@ class AntiPassoireRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function search(string $keyWords, $category)
+    {
+        $query = $this->createQueryBuilder('a');
+        if($keyWords != null){
+            $query->andWhere('MATCH_AGAINST(a.title, a.text) AGAINST (:keyWords boolean)>0')
+                ->setParameter('keyWords', $keyWords);
+        }
+        if($category != null) {
+            $query->innerJoin('a.categories', 'category')
+                ->andWhere('category = :category')
+                ->setParameter('category', $category)
+            ;
+        }
+        return $query->getQuery()->getResult();
+
     }
 
 //    /**
