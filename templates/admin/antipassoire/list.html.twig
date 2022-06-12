@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Liste des anti passoire</h2>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">{{ message|raw }}</div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-error" role="alert">{{ message|raw }}</div>
+    {% endfor %}
+
+{#    <a href="{{ path('admin_antipassoire_create') }}">Créer un anti passoire</a>#}
+
+    <ul>
+        {% for antiPassoire in antiPassoires %}
+            <li><a href="{{ path('admin_antpassoire_edit', {slug: antiPassoire.slug}) }}">{{ antiPassoire.title }}</a></li>
+        {% else %}
+            <li>Il n'y a pas d'anti passoire enregistrés</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
