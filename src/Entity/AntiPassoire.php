@@ -11,6 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=AntiPassoireRepository::class)
+ * @ORM\Table(name="anti_passoire", indexes={@ORM\Index(columns={"title", "text"}, flags={"fulltext"})})
  * @UniqueEntity(fields={"title"}, message="Ce titre est déjà utilisé par un autre anti passoire")
  */
 class AntiPassoire
