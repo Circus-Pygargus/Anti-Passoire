@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Création de la route /admin/antipasssoire/list">
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AntiPassoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AntiPassoireType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +184,7 @@
       <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="2AOuPznak8Ws27AbjG8PU5nyeX5" />
@@ -217,7 +225,7 @@
       <workItem from="1654892940326" duration="3717000" />
       <workItem from="1654934088716" duration="21091000" />
       <workItem from="1655018819421" duration="2226000" />
-      <workItem from="1655022787301" duration="5725000" />
+      <workItem from="1655022787301" duration="17825000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Read Me">
       <created>1654895660938</created>
@@ -296,7 +304,56 @@
       <option name="project" value="LOCAL" />
       <updated>1655025729447</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[FORMTYPE] Création de AntiPassoireType">
+      <created>1655028683192</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655028683192</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[FEAT] Création / édition de AntiPassoireType">
+      <created>1655028732073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1655028732073</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[FEAT] Modif entité AntiPassoire : ajout d'un index fulltext sur les colonnes title et text pour pouvoir faire des requêtes MATCH AGAINST">
+      <created>1655029727703</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655029727703</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[INFRA] Création extention Doctrine pour pouvoir faire des Match Against en requête dql">
+      <created>1655040614468</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040614468</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[REPOSITORY] AntiPassoireRepository : Création méthode search() qui fait une requête dql avec Match Against pour trouver les objets selon des mots clés">
+      <created>1655040730439</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040730439</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[FORMTYPE] Création de SearchAntiPassoireType">
+      <created>1655040768783</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040768783</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste">
+      <created>1655040827500</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655040827500</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +382,13 @@
     <MESSAGE value="[FEAT] Création / edition d'une catégorie + template" />
     <MESSAGE value="[Entity] AntiPassoire + repo + migration" />
     <MESSAGE value="[FEAT] Création de la route /admin/antipasssoire/list" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Création de la route /admin/antipasssoire/list" />
+    <MESSAGE value="[FORMTYPE] Création de AntiPassoireType" />
+    <MESSAGE value="[FEAT] Création / édition de AntiPassoireType" />
+    <MESSAGE value="[FEAT] Modif entité AntiPassoire : ajout d'un index fulltext sur les colonnes title et text pour pouvoir faire des requêtes MATCH AGAINST" />
+    <MESSAGE value="[INFRA] Création extention Doctrine pour pouvoir faire des Match Against en requête dql" />
+    <MESSAGE value="[REPOSITORY] AntiPassoireRepository : Création méthode search() qui fait une requête dql avec Match Against pour trouver les objets selon des mots clés" />
+    <MESSAGE value="[FORMTYPE] Création de SearchAntiPassoireType" />
+    <MESSAGE value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
   </component>
 </project>
