@@ -3,11 +3,15 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @UniqueEntity(fields={"label"}, message="Ce nom de catégorie est déjà utilisé")
  */
 class Category
 {
@@ -33,6 +37,16 @@ class Category
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $comment;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=AntiPassoire::class, mappedBy="categories")
+     */
+    private $antiPassoires;
+
+    public function __construct()
+    {
+        $this->antiPassoires = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -71,6 +85,33 @@ class Category
     public function setComment(?string $comment): self
     {
         $this->comment = $comment;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, AntiPassoire>
+     */
+    public function getAntiPassoires(): Collection
+    {
+        return $this->antiPassoires;
+    }
+
+    public function addAntiPassoire(AntiPassoire $antiPassoire): self
+    {
+        if (!$this->antiPassoires->contains($antiPassoire)) {
+            $this->antiPassoires[] = $antiPassoire;
+            $antiPassoire->addCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAntiPassoire(AntiPassoire $antiPassoire): self
+    {
+        if ($this->antiPassoires->removeElement($antiPassoire)) {
+            $antiPassoire->removeCategory($this);
+        }
 
         return $this;
     }
