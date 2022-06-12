@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>{{ pageTitlePrefix }} d'un anti passoire</h2>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success" role="alert">{{ message|raw }}</div>
+    {% endfor %}
+
+    {% for message in app.flashes('error') %}
+        <div class="alert alert-error" role="alert">{{ message|raw }}</div>
+    {% endfor %}
+
+
+    {{ form(form) }}
+{% endblock %}

@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[ADMIN] Création route et page d'accueil administration">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Création de la route /admin/antipasssoire/list">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -219,7 +215,9 @@
       <option name="presentableId" value="Default" />
       <updated>1654892938624</updated>
       <workItem from="1654892940326" duration="3717000" />
-      <workItem from="1654934088716" duration="18554000" />
+      <workItem from="1654934088716" duration="21091000" />
+      <workItem from="1655018819421" duration="2226000" />
+      <workItem from="1655022787301" duration="5725000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Read Me">
       <created>1654895660938</created>
@@ -249,7 +247,56 @@
       <option name="project" value="LOCAL" />
       <updated>1654957847353</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[DEPENDANCE] Besoin de slug et de timestampable">
+      <created>1654966214234</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654966214234</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[ENTITY] Category + repo + migration">
+      <created>1654966335496</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654966335496</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[FORMTYPE] Création de CategoryType">
+      <created>1654966465340</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654966465340</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[FEAT] Création route /admin/category/list + template">
+      <created>1654966581091</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654966581091</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[FEAT] Création / edition d'une catégorie + template">
+      <created>1654966673344</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654966673344</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[Entity] AntiPassoire + repo + migration">
+      <created>1655025665868</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655025665868</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[FEAT] Création de la route /admin/antipasssoire/list">
+      <created>1655025729447</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1655025729447</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +318,13 @@
     <MESSAGE value="Ajout Read Me" />
     <MESSAGE value="[User] entité, repo, migration, création de compte, modif de mdp, login et logout" />
     <MESSAGE value="[ADMIN] Création route et page d'accueil administration" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ADMIN] Création route et page d'accueil administration" />
+    <MESSAGE value="[DEPENDANCE] Besoin de slug et de timestampable" />
+    <MESSAGE value="[ENTITY] Category + repo + migration" />
+    <MESSAGE value="[FORMTYPE] Création de CategoryType" />
+    <MESSAGE value="[FEAT] Création route /admin/category/list + template" />
+    <MESSAGE value="[FEAT] Création / edition d'une catégorie + template" />
+    <MESSAGE value="[Entity] AntiPassoire + repo + migration" />
+    <MESSAGE value="[FEAT] Création de la route /admin/antipasssoire/list" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Création de la route /admin/antipasssoire/list" />
   </component>
 </project>
