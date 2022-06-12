@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[HTML] Réarrangement structure du site">
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/AntiPassoireController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -361,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655069826127</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors">
+      <created>1655071625913</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1655071625913</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +405,7 @@
     <MESSAGE value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
     <MESSAGE value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
     <MESSAGE value="[HTML] Réarrangement structure du site" />
-    <option name="LAST_COMMIT_MESSAGE" value="[HTML] Réarrangement structure du site" />
+    <MESSAGE value="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors" />
   </component>
 </project>

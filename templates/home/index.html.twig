@@ -7,10 +7,26 @@
     {{ form(form) }}
 
     <ul>
-        {% for antiPassoire in antiPassoires %}
-            <li><a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">{{ antiPassoire.title }}</a></li>
-        {% else %}
-            <li>T'as encore oublié un truc ? Fais une recherche !</li>
-        {% endfor %}
+    {% for antiPassoire in antiPassoires %}
+        <li>
+            <a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">
+                <div>
+                    <div>
+                    {% for category in antiPassoire.categories %}
+                        <div>{{ category.label }}</div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div>{{ antiPassoire.title }}</div>
+                <p>
+                    {{ antiPassoire.text|striptags|raw > 50
+                        ? antiPassoire.text|striptags|raw|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…'
+                        : antiPassoire.text|striptags|raw }}
+                </p>
+            </a>
+        </li>
+    {% else %}
+        <li>T'as encore oublié un truc ? Fais une recherche !</li>
+    {% endfor %}
     </ul>
 {% endblock %}
