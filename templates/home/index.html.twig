@@ -11,12 +11,12 @@
     {# Le champ de recherche d'anti passoire par mots clés#}
     {{ form(form) }}
 
-    {% if antiPassoires is not empty %}
-        <ul>
+    <ul>
         {% for antiPassoire in antiPassoires %}
-            <li>{{ antiPassoire.title }}</li>
+            <li><a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">{{ antiPassoire.title }}</a></li>
+        {% else %}
+            <li>T'as encore oublié un truc ? Fais une recherche !</li>
         {% endfor %}
-        </ul>
-    {% endif %}
+    </ul>
 </body>
 {% endblock %}

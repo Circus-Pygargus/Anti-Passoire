@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('bundles/ckeditor_mybuild/plugins/codesnippet/lib/highlight/styles/railscasts.css') }}" rel="stylesheet">
+    {{  parent() }}
+{% endblock %}
+
+
+{% block body %}
+    <h2>{{ antiPassoire.title }}</h2>
+    <div>{{ antiPassoire.text|raw }}</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('bundles/ckeditor_mybuild/plugins/codesnippet/lib/highlight/highlight.pack.js') }}"></script>
+
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+{% endblock %}

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[FEAT] Ajout de CKEditor 4 contenant un code snippets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AntiPassoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AntiPassoireType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +223,7 @@
       <workItem from="1654892940326" duration="3717000" />
       <workItem from="1654934088716" duration="21091000" />
       <workItem from="1655018819421" duration="2226000" />
-      <workItem from="1655022787301" duration="17825000" />
+      <workItem from="1655022787301" duration="23584000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Read Me">
       <created>1654895660938</created>
@@ -353,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655040827500</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="[FEAT] Ajout de CKEditor 4 contenant un code snippets">
+      <created>1655046038746</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1655046038746</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,6 +394,7 @@
     <MESSAGE value="[REPOSITORY] AntiPassoireRepository : Création méthode search() qui fait une requête dql avec Match Against pour trouver les objets selon des mots clés" />
     <MESSAGE value="[FORMTYPE] Création de SearchAntiPassoireType" />
     <MESSAGE value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
+    <MESSAGE value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
   </component>
 </project>

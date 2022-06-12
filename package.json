@@ -5,7 +5,7 @@
         "core-js": "^3.0.0",
         "regenerator-runtime": "^0.13.2",
         "sass": "^1.34.0",
-        "sass-loader": "^10.0.0",
+        "sass-loader": "^12.0.0",
         "@hotwired/stimulus": "^3.0.0",
         "webpack-notifier": "^1.6.0"
     },
@@ -13,8 +13,8 @@
     "private": true,
     "scripts": {
         "dev-server": "encore dev-server",
-        "dev": "./node_modules/@symfony/webpack-encore/bin/encore.js dev",
-        "watch": "./node_modules/@symfony/webpack-encore/bin/encore.js dev --watch",
-        "build": "./node_modules/@symfony/webpack-encore/bin/encore.js production --progress"
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
     }
 }
