@@ -75,9 +75,21 @@ class AntiPassoire
      */
     private $lastDisplay;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="createdAntiPassoires")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $creator;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="ContributedAntiPassoires")
+     */
+    private $contributors;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->contributors = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -187,6 +199,42 @@ class AntiPassoire
     public function setLastDisplay(?\DateTimeInterface $lastDisplay): self
     {
         $this->lastDisplay = $lastDisplay;
+
+        return $this;
+    }
+
+    public function getCreator(): ?User
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?User $creator): self
+    {
+        $this->creator = $creator;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getContributors(): Collection
+    {
+        return $this->contributors;
+    }
+
+    public function addContributor(User $contributor): self
+    {
+        if (!$this->contributors->contains($contributor)) {
+            $this->contributors[] = $contributor;
+        }
+
+        return $this;
+    }
+
+    public function removeContributor(User $contributor): self
+    {
+        $this->contributors->removeElement($contributor);
 
         return $this;
     }

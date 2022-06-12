@@ -68,6 +68,8 @@ class AntiPassoireController extends AbstractController
         
         if ($form->isSubmitted() && $form->isValid()) {
             try {
+                $antipassoire->setCreator($this->getUser());
+                $antipassoire->addContributor($this->getUser());
                 $this->em->persist($antipassoire);
                 $this->em->flush();
                 $lastword = $isNew ? 'créé' : 'édité';

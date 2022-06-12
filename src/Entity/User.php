@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -48,6 +50,22 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="boolean")
      */
     private $isVerified = false;
+
+    /**
+     * @ORM\OneToMany(targetEntity=AntiPassoire::class, mappedBy="creator")
+     */
+    private $createdAntiPassoires;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=AntiPassoire::class, mappedBy="contributors")
+     */
+    private $ContributedAntiPassoires;
+
+    public function __construct()
+    {
+        $this->createdAntiPassoires = new ArrayCollection();
+        $this->ContributedAntiPassoires = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -153,6 +171,63 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setIsVerified(bool $isVerified): self
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, AntiPassoire>
+     */
+    public function getCreatedAntiPassoires(): Collection
+    {
+        return $this->createdAntiPassoires;
+    }
+
+    public function addCreatedAntiPassoire(AntiPassoire $createdAntiPassoire): self
+    {
+        if (!$this->createdAntiPassoires->contains($createdAntiPassoire)) {
+            $this->createdAntiPassoires[] = $createdAntiPassoire;
+            $createdAntiPassoire->setCreator($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCreatedAntiPassoire(AntiPassoire $createdAntiPassoire): self
+    {
+        if ($this->createdAntiPassoires->removeElement($createdAntiPassoire)) {
+            // set the owning side to null (unless already changed)
+            if ($createdAntiPassoire->getCreator() === $this) {
+                $createdAntiPassoire->setCreator(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, AntiPassoire>
+     */
+    public function getContributedAntiPassoires(): Collection
+    {
+        return $this->ContributedAntiPassoires;
+    }
+
+    public function addContributedAntiPassoire(AntiPassoire $contributedAntiPassoire): self
+    {
+        if (!$this->ContributedAntiPassoires->contains($contributedAntiPassoire)) {
+            $this->ContributedAntiPassoires[] = $contributedAntiPassoire;
+            $contributedAntiPassoire->addContributor($this);
+        }
+
+        return $this;
+    }
+
+    public function removeContributedAntiPassoire(AntiPassoire $contributedAntiPassoire): self
+    {
+        if ($this->ContributedAntiPassoires->removeElement($contributedAntiPassoire)) {
+            $contributedAntiPassoire->removeContributor($this);
+        }
 
         return $this;
     }
