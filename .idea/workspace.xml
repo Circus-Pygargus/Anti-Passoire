@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors">
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[STYLE] 1ère mise en place du style général de l'appli">
+      <change afterPath="$PROJECT_DIR$/assets/admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/admin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -367,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655071625913</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="[CONTENT] liste résultats : affichage plus complet de chaque antiPassoire">
+      <created>1655073990910</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1655073990910</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,6 +419,8 @@
     <MESSAGE value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
     <MESSAGE value="[HTML] Réarrangement structure du site" />
     <MESSAGE value="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors" />
+    <MESSAGE value="[CONTENT] liste résultats : affichage plus complet de chaque antiPassoire" />
+    <MESSAGE value="[STYLE] 1ère mise en place du style général de l'appli" />
+    <option name="LAST_COMMIT_MESSAGE" value="[STYLE] 1ère mise en place du style général de l'appli" />
   </component>
 </project>
