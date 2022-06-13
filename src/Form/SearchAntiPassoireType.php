@@ -34,7 +34,11 @@ class SearchAntiPassoireType extends AbstractType
                     'placeholder' => 'Entrez un ou plusieurs mots clés'
                 ]
             ])
-            ->add('Rechercher', SubmitType::class)
+            ->add('Rechercher', SubmitType::class, [
+                'attr' => [
+                    'class' => 'btn btn-submit'
+                ]
+            ])
         ;
     }
 

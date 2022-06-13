@@ -23,6 +23,8 @@
                     </a>
                 </h1>
 
+                {% include 'rebus.html.twig' %}
+
 {#                <div class="login">#}
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <a class="login" href="{{ path('app_logout') }}">Déconnexion</a>
@@ -34,17 +36,21 @@
         </header>
 
         <main>
-            <nav class="navbar-main">
-                <ul>
-                    {% if is_granted('ROLE_ADMIN') %}
+            <div class="left-col">
+                {% if is_granted('ROLE_ADMIN') %}
+                <nav class="admin-navbar">
+                    <ul>
                         <li>
                             <a href="{{ path('app_admin') }}">Gestion</a>
                         </li>
-                    {% endif %}
 
-                    {% block navbarList %}{% endblock %}
-                </ul>
-            </nav>
+                        {% block navbarList %}{% endblock %}
+                    </ul>
+                </nav>
+                {% endif %}
+
+                {% block searcher %}{% endblock %}
+            </div>
 
             <div class="content">
                 {% block body %}{% endblock %}

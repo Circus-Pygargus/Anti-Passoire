@@ -8,6 +8,13 @@
     box-sizing: inherit;
 }
 
+a,
+a:hover,
+a:active,
+a:visited {
+    color: inherit;
+}
+
 body {
     font-size: 16px;
     background-color: lightgray;
@@ -66,39 +73,244 @@ main {
     width: 1280px;
     margin: auto;
 
-    .navbar-main {
-        ul {
-            li {
-                a {
-                    display: block;
-                    text-align: center;
-                    width: 256px;
-                    height: 80px;
-                    line-height: 80px;
-                    font-size: 2rem;
-                    margin-top: 16px;
-                    color: dimgray;
-                    background-color: darkgrey;
-                    border: 1px solid #555555;
-                    border-radius: 10px;
+    .left-col {
+
+        .admin-navbar {
+            ul {
+                display: block;
+                text-align: center;
+                width: 256px;
+                line-height: 80px;
+                font-size: 2rem;
+                margin-top: 16px;
+                padding: 16px;
+                background-color: darkgrey;
+                border: 1px solid #555555;
+                border-radius: 10px;
+
+                li {
+
+                    a {
+                        color: dimgray;
+                        transition: color .5s;
+
+                        &:hover {
+                            color: #FF8800;
+                        }
+
+                        &:active {
+                            color: whitesmoke;
+                        }
+                    }
                 }
+            }
+        }
+
+        .search {
+            width: 256px;
+            margin-top: 16px;
+            padding: 16px;
+            color: dimgray;
+            background-color: darkgrey;
+            border: 1px solid #555555;
+            border-radius: 10px;
+
+            label {
+                margin-top: 0;
+            }
+
+            input {
+                width: 86%;
+                margin-top: 16px;
+            }
+
+            .btn {
+                margin-left: 19%;
+                color: dimgray;
             }
         }
     }
 
     .content {
-        width: 1004px;
+        width: 903px;
         margin-left: 20px;
         margin-top: 16px;
         padding: 2rem;
         background-color: dimgray;
         border: 1px solid #555555;
         border-radius: 10px;
+        color: whitesmoke;
+
+        .welcome {
+            text-align: center;
+            font-size: 2rem;
+        }
 
         h2 {
             text-align: center;
             font-size: 3rem;
+
+            &.antipassoire-title {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+table {
+    margin: 32px auto;
+    border-spacing: 0 16px;
+
+    &.table-categories {
+        width: 90%;
+    }
+
+    &.table-antipassoires {
+        width: 100%;
+    }
+
+    thead {
+
+        tr {
+
+            th {
+                text-align: left;
+                padding: 8px;
+            }
+        }
+    }
+
+    tbody {
+
+        tr {
+
+            td {
+
+            }
+        }
+    }
+}
+
+form {
+
+    label {
+        display: block;
+        margin: 16px 0 8px;
+
+        &.required:after {
+            content:" *";
+        }
+    }
+
+    input,
+    textarea {
+        width: auto;
+        padding: 16px;
+        border-width: 0;
+        border-style: solid;
+        border-color: whitesmoke;
+        border-radius: 8px;
+    }
+
+    input {
+        width: 30%;
+        height: 32px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.btn {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 16px 0 0;
+    padding: 10px 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+
+    &.btn-create,
+    &.btn-submit {
+        color: whitesmoke;
+        //background-color: dimgray;
+        background-color: inherit;
+        border-color: whitesmoke;
+        transition: all .5s;
+
+        &:hover {
+            color: dimgray;
+            background-color: whitesmoke;
+            border-color: whitesmoke;
+        }
+
+        &:active {
             color: whitesmoke;
+            background-color: #555555;
+            border-color: whitesmoke;
+        }
+    }
+}
+
+.rebus {
+    display: flex;
+    align-items: center;
+    position:relative;
+    color: whitesmoke;
+
+    > div {
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+
+        &.plus,
+        &.text {
+            width: auto;
+            font-size: 3rem;
+            font-weight: 300;
+        }
+
+        &.jambon {
+            position: relative;
+
+            .helper {
+                position: relative;
+                top: -24px;
+                font-size: .8rem;
+            }
+        }
+
+        &.haie,
+        &.oie,
+        &.caisse {
+            position: relative;
+            top: 8px;
+        }
+
+        &.haie {
+            left: 4px;
+        }
+
+        &.caisse {
+            left: 8px;
+        }
+
+        &.lame,
+        &.aime,
+        &.tee {
+            position: relative;
+            top: 4px;
+            width: 42px;
+            height: 42px;
+        }
+
+        &.on {
+            width: 48px;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        svg {
+            fill: whitesmoke;
         }
     }
 }

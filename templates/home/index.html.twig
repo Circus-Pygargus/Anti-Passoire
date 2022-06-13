@@ -2,9 +2,15 @@
 
 {% block title %}Anti Passoire{% endblock %}
 
+{% block searcher %}
+    {% include 'searcher.html.twig' %}
+{% endblock %}
+
 {% block body %}
-    {# Le champ de recherche d'anti passoire par mots clés#}
-    {{ form(form) }}
+
+    {% if antiPassoires|length < 1 %}
+        <div class="welcome">T'as encore oublié un truc ? Fais une recherche !</div>
+    {% endif %}
 
     <ul>
     {% for antiPassoire in antiPassoires %}
@@ -26,7 +32,7 @@
             </a>
         </li>
     {% else %}
-        <li>T'as encore oublié un truc ? Fais une recherche !</li>
+        <li></li>
     {% endfor %}
     </ul>
 {% endblock %}

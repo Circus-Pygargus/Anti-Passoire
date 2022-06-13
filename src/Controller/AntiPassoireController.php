@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Form\SearchAntiPassoireType;
 use App\Repository\AntiPassoireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,7 +25,8 @@ class AntiPassoireController extends AbstractController
             $return = $this->redirectToRoute('admin_antipassoire_list');
         } else {
             $return = $this->render('anti_passoire/index.html.twig', [
-                'antiPassoire' => $antiPassoire
+                'antiPassoire' => $antiPassoire,
+                'searcherForm' => $this->createForm(SearchAntiPassoireType::class)->createView()
             ]);
         }
         

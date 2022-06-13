@@ -63,7 +63,10 @@ class AntiPassoireType extends AbstractType
                 ],
             ])
             ->add('submit', SubmitType::class, [
-                'label' => 'Enregistrer'
+                'label' => 'Enregistrer',
+                'attr' => [
+                    'class' => 'btn btn-submit'
+                ]
             ])
         ;
     }

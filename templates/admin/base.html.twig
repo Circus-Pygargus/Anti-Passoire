@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-    {{ parent() }}
+{#{% block stylesheets %}#}
+{#    {{ parent() }}#}
 {#    {{ encore_entry_link_tags('admin') }}#}
-{% endblock %}
+{#{% endblock %}#}
 
 {% block navbarList %}
     <li><a href="{{ path('admin_category_list') }}">Categories</a></li>
     <li><a href="{{ path('admin_antipassoire_list') }}">Anti passoire</a></li>
 {% endblock %}
 
-{% block javascripts %}
-    {{ encore_entry_script_tags('admin') }}
-{% endblock %}
+{#{% block javascripts %}#}
+{#    {{ encore_entry_script_tags('admin') }}#}
+{#{% endblock %}#}
