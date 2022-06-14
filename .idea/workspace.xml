@@ -1,37 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[CONTENT] Affiche systématiquement les images du rébus">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AntiPassoireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AntiPassoireController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -49,9 +35,11 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
       <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
@@ -106,10 +94,12 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
       <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/notifier" />
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
       <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/messenger" />
@@ -161,48 +151,32 @@
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/psr/link" />
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
-      <path value="$PROJECT_DIR$/vendor/behat/transliterator" />
-      <path value="$PROJECT_DIR$/vendor/gedmo/doctrine-extensions" />
-      <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
-      <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
     </include_path>
   </component>
-  <component name="ProjectId" id="2AOuPznak8Ws27AbjG8PU5nyeX5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2AYzGdHJmn07a3uzcNg4WBDQIJD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/packages" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\wamp64\www\AntiPassoire\config\packages" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\wamp64\www\AntiPassoire\templates\" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -213,229 +187,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="" />
-      <created>1654892938624</created>
+      <changelist id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="" />
+      <created>1655201211742</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654892938624</updated>
-      <workItem from="1654892940326" duration="3717000" />
-      <workItem from="1654934088716" duration="21091000" />
-      <workItem from="1655018819421" duration="2226000" />
-      <workItem from="1655022787301" duration="23584000" />
-      <workItem from="1655084496353" duration="37923000" />
-      <workItem from="1655197743755" duration="1699000" />
+      <updated>1655201211742</updated>
+      <workItem from="1655201214695" duration="1678000" />
     </task>
-    <task id="LOCAL-00001" summary="Ajout Read Me">
-      <created>1654895660938</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654895660938</updated>
-    </task>
-    <task id="LOCAL-00002" summary="[User] entité, repo, migration, création de compte, modif de mdp, login et logout">
-      <created>1654941932579</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654941932579</updated>
-    </task>
-    <task id="LOCAL-00003" summary="[ADMIN] Création route et page d'accueil administration">
-      <created>1654957826272</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1654957826272</updated>
-    </task>
-    <task id="LOCAL-00004" summary="[ADMIN] Création route et page d'accueil administration">
-      <created>1654957847353</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1654957847353</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[DEPENDANCE] Besoin de slug et de timestampable">
-      <created>1654966214234</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1654966214234</updated>
-    </task>
-    <task id="LOCAL-00006" summary="[ENTITY] Category + repo + migration">
-      <created>1654966335496</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1654966335496</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[FORMTYPE] Création de CategoryType">
-      <created>1654966465340</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1654966465340</updated>
-    </task>
-    <task id="LOCAL-00008" summary="[FEAT] Création route /admin/category/list + template">
-      <created>1654966581091</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1654966581091</updated>
-    </task>
-    <task id="LOCAL-00009" summary="[FEAT] Création / edition d'une catégorie + template">
-      <created>1654966673344</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1654966673344</updated>
-    </task>
-    <task id="LOCAL-00010" summary="[Entity] AntiPassoire + repo + migration">
-      <created>1655025665868</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1655025665868</updated>
-    </task>
-    <task id="LOCAL-00011" summary="[FEAT] Création de la route /admin/antipasssoire/list">
-      <created>1655025729447</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1655025729447</updated>
-    </task>
-    <task id="LOCAL-00012" summary="[FORMTYPE] Création de AntiPassoireType">
-      <created>1655028683192</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1655028683192</updated>
-    </task>
-    <task id="LOCAL-00013" summary="[FEAT] Création / édition de AntiPassoireType">
-      <created>1655028732073</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1655028732073</updated>
-    </task>
-    <task id="LOCAL-00014" summary="[FEAT] Modif entité AntiPassoire : ajout d'un index fulltext sur les colonnes title et text pour pouvoir faire des requêtes MATCH AGAINST">
-      <created>1655029727703</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1655029727703</updated>
-    </task>
-    <task id="LOCAL-00015" summary="[INFRA] Création extention Doctrine pour pouvoir faire des Match Against en requête dql">
-      <created>1655040614468</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1655040614468</updated>
-    </task>
-    <task id="LOCAL-00016" summary="[REPOSITORY] AntiPassoireRepository : Création méthode search() qui fait une requête dql avec Match Against pour trouver les objets selon des mots clés">
-      <created>1655040730439</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1655040730439</updated>
-    </task>
-    <task id="LOCAL-00017" summary="[FORMTYPE] Création de SearchAntiPassoireType">
-      <created>1655040768783</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1655040768783</updated>
-    </task>
-    <task id="LOCAL-00018" summary="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste">
-      <created>1655040827500</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1655040827500</updated>
-    </task>
-    <task id="LOCAL-00019" summary="[FEAT] Ajout de CKEditor 4 contenant un code snippets">
-      <created>1655046038746</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1655046038746</updated>
-    </task>
-    <task id="LOCAL-00020" summary="[HTML] Réarrangement structure du site">
-      <created>1655069826127</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1655069826127</updated>
-    </task>
-    <task id="LOCAL-00021" summary="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors">
-      <created>1655071625913</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1655071625913</updated>
-    </task>
-    <task id="LOCAL-00022" summary="[CONTENT] liste résultats : affichage plus complet de chaque antiPassoire">
-      <created>1655073990910</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1655073990910</updated>
-    </task>
-    <task id="LOCAL-00023" summary="[STYLE] 1ère mise en place du style général de l'appli">
-      <created>1655083212656</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1655083212656</updated>
-    </task>
-    <task id="LOCAL-00024" summary="[CONTENT] Affiche systématiquement les images du rébus">
-      <created>1655200061845</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1655200061845</updated>
-    </task>
-    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajout Read Me" />
-    <MESSAGE value="[User] entité, repo, migration, création de compte, modif de mdp, login et logout" />
-    <MESSAGE value="[ADMIN] Création route et page d'accueil administration" />
-    <MESSAGE value="[DEPENDANCE] Besoin de slug et de timestampable" />
-    <MESSAGE value="[ENTITY] Category + repo + migration" />
-    <MESSAGE value="[FORMTYPE] Création de CategoryType" />
-    <MESSAGE value="[FEAT] Création route /admin/category/list + template" />
-    <MESSAGE value="[FEAT] Création / edition d'une catégorie + template" />
-    <MESSAGE value="[Entity] AntiPassoire + repo + migration" />
-    <MESSAGE value="[FEAT] Création de la route /admin/antipasssoire/list" />
-    <MESSAGE value="[FORMTYPE] Création de AntiPassoireType" />
-    <MESSAGE value="[FEAT] Création / édition de AntiPassoireType" />
-    <MESSAGE value="[FEAT] Modif entité AntiPassoire : ajout d'un index fulltext sur les colonnes title et text pour pouvoir faire des requêtes MATCH AGAINST" />
-    <MESSAGE value="[INFRA] Création extention Doctrine pour pouvoir faire des Match Against en requête dql" />
-    <MESSAGE value="[REPOSITORY] AntiPassoireRepository : Création méthode search() qui fait une requête dql avec Match Against pour trouver les objets selon des mots clés" />
-    <MESSAGE value="[FORMTYPE] Création de SearchAntiPassoireType" />
-    <MESSAGE value="[FEAT] Ajout de la recherche d'antiPassoires par mots clés + affichage résultat minimaliste" />
-    <MESSAGE value="[FEAT] Ajout de CKEditor 4 contenant un code snippets" />
-    <MESSAGE value="[HTML] Réarrangement structure du site" />
-    <MESSAGE value="[ENTITY] AntiPassoire : ajout des propriétés creator et contributors" />
-    <MESSAGE value="[CONTENT] liste résultats : affichage plus complet de chaque antiPassoire" />
-    <MESSAGE value="[STYLE] 1ère mise en place du style général de l'appli" />
-    <MESSAGE value="[STYLE] suite mise en place du style général de l'appli + divers déplacements de contenu" />
-    <MESSAGE value="[CONTENT] Affiche systématiquement les images du rébus" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CONTENT] Affiche systématiquement les images du rébus" />
   </component>
 </project>

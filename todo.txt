@@ -5,6 +5,9 @@ _ recherche infructueuse :
 _ recherche :
     - donner la possibilité de ne pas mettre de mots clés pour avoir la liste complète par catégorie ou pour toutes les catégories
 
+_ faire les pages 404, 503 ...
+
+
 
 BUGS :
 _ après édition, voici le flashMassage : La catégorie JS a bien été créée.

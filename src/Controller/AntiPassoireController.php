@@ -21,15 +21,12 @@ class AntiPassoireController extends AbstractController
         $antiPassoire = $antiPassoireRepository->findOneBy(['slug' => $slug]);
 
         if ($antiPassoire === null) {
-            $this->addFlash('error', "Un problème est survenu, l'anti passoire n'a pas été créée !");
-            $return = $this->redirectToRoute('admin_antipassoire_list');
-        } else {
-            $return = $this->render('anti_passoire/index.html.twig', [
-                'antiPassoire' => $antiPassoire,
-                'searcherForm' => $this->createForm(SearchAntiPassoireType::class)->createView()
-            ]);
+            throw $this->createNotFoundException("Cet anti passoire n'existe pas.");
         }
-        
-        return $return;
+
+        return $this->render('anti_passoire/index.html.twig', [
+            'antiPassoire' => $antiPassoire,
+            'searcherForm' => $this->createForm(SearchAntiPassoireType::class)->createView()
+        ]);
     }
 }
