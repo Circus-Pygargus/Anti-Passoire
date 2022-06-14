@@ -332,6 +332,15 @@ form {
             height: 42px;
         }
 
+        &.tee {
+            &::before {
+                content: '→';
+                position: absolute;
+                top: 27px;
+                transform: rotate(-30deg);
+            }
+        }
+
         &.on {
             width: 48px;
             font-size: 1rem;
