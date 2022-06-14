@@ -9,6 +9,9 @@ _ recherche :
 _ flashMessage :
     - faire !!
 
+_ page liées à User (login, enregistrement, modif pwd) :
+    - revoir les vues
+
 _ faire les pages 404, 503 ...
 
 
