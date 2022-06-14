@@ -6,6 +6,8 @@ use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -27,6 +29,21 @@ class SearchAntiPassoireType extends AbstractType
                 'choice_label' => 'label',
                 'expanded' => false,
                 'multiple' => false
+            ])
+            ->add('searchLimit', ChoiceType::class, [
+                'required' => true,
+                'label' => 'Max par page',
+                'choices' => [
+                    '10' => 10,
+                    '25' => 25,
+                    '50' => 50
+                ],
+                'expanded' => false,
+                'multiple' => false
+            ])
+            ->add('pageNumber', HiddenType::class, [
+                'required' => false,
+                'data' => 1
             ])
             ->add('keyWords', SearchType::class, [
                 'label' => false,

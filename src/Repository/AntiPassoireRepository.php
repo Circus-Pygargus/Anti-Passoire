@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\AntiPassoire;
 use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -41,7 +40,7 @@ class AntiPassoireRepository extends ServiceEntityRepository
         }
     }
 
-    public function search(?string $keyWords, ?Category $category)
+    public function search(?string $keyWords, ?Category $category, int $page, int $limit): ?array
     {
         $query = $this->createQueryBuilder('a');
         if($keyWords != null){
@@ -54,7 +53,29 @@ class AntiPassoireRepository extends ServiceEntityRepository
                 ->setParameter('category', $category)
             ;
         }
+        $query->setFirstResult(($page * $limit) - $limit)
+            ->setMaxResults($limit)
+        ;
+
         return $query->getQuery()->getResult();
+    }
+
+    public function getTotalForResarch(?string $keyWords, ?Category $category): int
+    {
+        $query = $this->createQueryBuilder('a')
+            ->select('COUNT(a)');
+
+        if($keyWords != null){
+            $query->andWhere('MATCH_AGAINST(a.title, a.text) AGAINST (:keyWords boolean)>0')
+                ->setParameter('keyWords', $keyWords);
+        }
+        if($category != null) {
+            $query->innerJoin('a.categories', 'category')
+                ->andWhere('category = :category')
+                ->setParameter('category', $category);
+        }
+
+        return $query->getQuery()->getSingleScalarResult();
     }
 
 //    /**

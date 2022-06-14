@@ -10,29 +10,42 @@
 
     {% if antiPassoires|length < 1 %}
         <div class="welcome">T'as encore oublié un truc ? Fais une recherche !</div>
-    {% endif %}
-
-    <ul>
-    {% for antiPassoire in antiPassoires %}
-        <li>
-            <a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">
-                <div>
-                    <div>
-                    {% for category in antiPassoire.categories %}
-                        <div>{{ category.label }}</div>
-                    {% endfor %}
-                    </div>
-                </div>
-                <div>{{ antiPassoire.title }}</div>
-                <p>
-                    {{ antiPassoire.text|striptags|raw > 50
-                        ? antiPassoire.text|striptags|raw|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…'
-                        : antiPassoire.text|striptags|raw }}
-                </p>
-            </a>
-        </li>
     {% else %}
-        <li></li>
-    {% endfor %}
-    </ul>
+        <ul>
+        {% for antiPassoire in antiPassoires %}
+            <li>
+                <a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">
+                    <div>
+                        <div>
+                        {% for category in antiPassoire.categories %}
+                            <div>{{ category.label }}</div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div>{{ antiPassoire.title }}</div>
+                    <p>
+                        {{ antiPassoire.text|striptags|raw > 50
+                            ? antiPassoire.text|striptags|raw|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…'
+                            : antiPassoire.text|striptags|raw }}
+                    </p>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+        {% if totalFound > searchLimit %}
+        <ul id="pagination" class="pagination">
+            {% for pageNumber in paginationHelper %}
+                <li data-page-number="{{ pageNumber }}"
+                    class="
+                        {% if pageNumber == actualPageValue %}
+                            current
+                        {% elseif pageNumber is numeric %}
+                            clickable
+                        {% endif %}
+                    "
+                >{{ pageNumber }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    {% endif %}
 {% endblock %}
