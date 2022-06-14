@@ -30,6 +30,7 @@ class SearchAntiPassoireType extends AbstractType
             ])
             ->add('keyWords', SearchType::class, [
                 'label' => false,
+                'required' => false,
                 'attr' => [
                     'placeholder' => 'Entrez un ou plusieurs mots clés'
                 ]

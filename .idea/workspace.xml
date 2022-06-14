@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[STYLE] suite mise en place du style général de l'appli + divers déplacements de contenu">
+    <list default="true" id="591a153a-d34b-496a-8e65-eb0e17c89c5c" name="Changes" comment="[CONTENT] Affiche systématiquement les images du rébus">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rebus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rebus.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +223,7 @@
       <workItem from="1655018819421" duration="2226000" />
       <workItem from="1655022787301" duration="23584000" />
       <workItem from="1655084496353" duration="37923000" />
-      <workItem from="1655197743755" duration="1067000" />
+      <workItem from="1655197743755" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout Read Me">
       <created>1654895660938</created>
@@ -385,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655083212656</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="[CONTENT] Affiche systématiquement les images du rébus">
+      <created>1655200061845</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655200061845</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,6 +435,7 @@
     <MESSAGE value="[CONTENT] liste résultats : affichage plus complet de chaque antiPassoire" />
     <MESSAGE value="[STYLE] 1ère mise en place du style général de l'appli" />
     <MESSAGE value="[STYLE] suite mise en place du style général de l'appli + divers déplacements de contenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="[STYLE] suite mise en place du style général de l'appli + divers déplacements de contenu" />
+    <MESSAGE value="[CONTENT] Affiche systématiquement les images du rébus" />
+    <option name="LAST_COMMIT_MESSAGE" value="[CONTENT] Affiche systématiquement les images du rébus" />
   </component>
 </project>
