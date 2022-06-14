@@ -34,6 +34,7 @@ class SearchAntiPassoireType extends AbstractType
                 'required' => true,
                 'label' => 'Max par page',
                 'choices' => [
+                    '2' => 2,
                     '10' => 10,
                     '25' => 25,
                     '50' => 50

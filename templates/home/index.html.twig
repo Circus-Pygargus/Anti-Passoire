@@ -8,12 +8,13 @@
 
 {% block body %}
 
-    {% if antiPassoires|length < 1 %}
+    {% if searcherResponseMsg == '' %}
         <div class="welcome">
             <p>T'as encore oublié un truc ?</p>
             <p>Fais une recherche !</p>
         </div>
     {% else %}
+        <p class="search-result-msg">{{ searcherResponseMsg }}</p>
         <ul>
         {% for antiPassoire in antiPassoires %}
             <li>

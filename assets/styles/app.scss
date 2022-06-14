@@ -157,7 +157,6 @@ main {
                     margin-top: 3rem;
                 }
             }
-
         }
 
         h2 {
@@ -167,6 +166,12 @@ main {
             &.antipassoire-title {
                 margin-bottom: 32px;
             }
+        }
+
+        .search-result-msg {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 16px;
         }
 
         ul.pagination {

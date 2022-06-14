@@ -25,14 +25,14 @@ class HomeController extends AbstractController
         $totalFound = 0;
         $searchLimit = 10;
         $page = 1;
-//dd($page);
+        $searcherResponseMsg = '';
+
         $form = $this->createForm(SearchAntiPassoireType::class);
         $search = $form->handleRequest($request);
-//dd($search->get('categories')->getData());
-//dd($search->get('limit')->getData());
+
         if ($form->isSubmitted() && $form->isValid()) {
             $searchLimit = $search->get('searchLimit')->getData();
-            $page = $page = $search->get('pageNumber')->getData();
+            $page = $search->get('pageNumber')->getData();
             $antiPassoires = $antiPassoireRepository->search(
                 $search->get('keyWords')->getData(),
                 $search->get('category')->getData(),
@@ -43,12 +43,22 @@ class HomeController extends AbstractController
                 $search->get('keyWords')->getData(),
                 $search->get('category')->getData()
             );
-//            dd($paginationService->getBuilderHelpers($totalFound, $page));
+            $antiPassoiresGiven = count($antiPassoires);
+            if ($antiPassoiresGiven) {
+                if ($antiPassoiresGiven !== $totalFound) {
+                    $searcherResponseMsg = 'Voici ' . $antiPassoiresGiven . ' des ' . $totalFound . ' résultats possibles pour cette recherche :';
+                } else {
+                    $searcherResponseMsg = $antiPassoiresGiven . ' résultat' . ($antiPassoiresGiven > 1 ? 's' : '') . ' pour cette recherche :';
+                }
+            } else {
+                $searcherResponseMsg = 'Cette recherche ne donne aucun résultat !';
+            }
         }
 
         return $this->render('home/index.html.twig', [
             'form' => $form->createView(),
             'searcherForm' => $form->createView(),
+            'searcherResponseMsg' => $searcherResponseMsg,
             'antiPassoires' => $antiPassoires,
             'totalFound' => $totalFound,
             'searchLimit' => $searchLimit,
