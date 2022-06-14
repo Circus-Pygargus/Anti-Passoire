@@ -9,7 +9,10 @@
 {% block body %}
 
     {% if antiPassoires|length < 1 %}
-        <div class="welcome">T'as encore oublié un truc ? Fais une recherche !</div>
+        <div class="welcome">
+            <p>T'as encore oublié un truc ?</p>
+            <p>Fais une recherche !</p>
+        </div>
     {% else %}
         <ul>
         {% for antiPassoire in antiPassoires %}

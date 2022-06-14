@@ -142,8 +142,22 @@ main {
         color: whitesmoke;
 
         .welcome {
-            text-align: center;
-            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            p {
+                font-size: 2rem;
+                line-height: 2rem;
+
+                &:not(:first-child) {
+                    margin-top: 3rem;
+                }
+            }
+
         }
 
         h2 {

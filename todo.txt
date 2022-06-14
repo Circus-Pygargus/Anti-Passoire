@@ -3,7 +3,8 @@ _ recherche infructueuse :
      Pas de résultats, change de catégorie ou choisis d'autres mots clés ...
 
 _ recherche :
-    - donner la possibilité de ne pas mettre de mots clés pour avoir la liste complète par catégorie ou pour toutes les catégories
+    - ajouter un champ 'Trier par' (date création, dernière édition, nbr de vue ...)
+        en profiter pour cacher par défaut cette partie + le champ de nbr par page
 
 _ faire les pages 404, 503 ...
 
