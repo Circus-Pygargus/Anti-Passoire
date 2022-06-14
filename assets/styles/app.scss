@@ -168,10 +168,64 @@ main {
             }
         }
 
-        .search-result-msg {
-            text-align: center;
-            font-size: 2rem;
-            margin-top: 16px;
+        .search-result {
+
+            &-msg {
+                text-align: center;
+                font-size: 2rem;
+                margin-top: 16px;
+            }
+
+            &-antipassoires {
+
+                .antipassoire {
+                    display: block;
+                    width: 800px;
+                    height: auto;
+                    margin: 32px auto 0;
+                    padding: 16px;
+                    border: 1px solid whitesmoke;
+                    border-radius: 16px;
+                    transition: border-color .5s;
+
+                    &:first-of-type {
+                        margin-top: 64px;
+                    }
+
+                    &:hover {
+                        border-color: #FF8800;
+                    }
+                    &:active {
+                        border-color: dimgrey;
+                    }
+                    //&:hover .antipassoire-title,
+                    //&:active .antipassoire-title {
+                    //    color: #FF8800;
+                    //}
+
+                    &-categories {
+
+                        .category-label {
+                            display: inline-block;
+                            margin-right: 8px;
+                            padding: 5px 8px;
+                            background-color: darkgrey;
+                            border-radius: 8px;
+                        }
+                    }
+
+                    &-title {
+                        font-size: 1.8rem;
+                        text-align: center;
+                        margin: 8px 0 16px;
+                        transition: color .5s;
+                    }
+
+                    &-excerpt {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
 
         ul.pagination {
@@ -206,7 +260,7 @@ main {
 }
 
 table {
-    margin: 32px auto;
+    margin: 24px auto;
     border-spacing: 0 16px;
 
     &.table-categories {
@@ -296,6 +350,10 @@ form {
             background-color: #555555;
             border-color: whitesmoke;
         }
+    }
+
+    &.btn-create {
+        margin: 24px 0 0;
     }
 }
 

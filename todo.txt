@@ -6,6 +6,9 @@ _ recherche :
     - ajouter un champ 'Trier par' (date création, dernière édition, nbr de vue ...)
         en profiter pour cacher par défaut cette partie + le champ de nbr par page
 
+_ flashMessage :
+    - faire !!
+
 _ faire les pages 404, 503 ...
 
 

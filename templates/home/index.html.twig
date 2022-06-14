@@ -14,28 +14,30 @@
             <p>Fais une recherche !</p>
         </div>
     {% else %}
-        <p class="search-result-msg">{{ searcherResponseMsg }}</p>
-        <ul>
-        {% for antiPassoire in antiPassoires %}
-            <li>
-                <a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}">
-                    <div>
-                        <div>
+        <div class="search-result">
+            <p class="search-result-msg">{{ searcherResponseMsg }}</p>
+            <ul class="search-result-antipassoires">
+            {% for antiPassoire in antiPassoires %}
+                <li
+                        class="antipassoire">
+                    <a href="{{ path('app_antipassoire_show', {slug: antiPassoire.slug}) }}"
+                    >
+                        <div class="antipassoire-categories">
                         {% for category in antiPassoire.categories %}
-                            <div>{{ category.label }}</div>
+                            <div class="category-label">{{ category.label }}</div>
                         {% endfor %}
                         </div>
-                    </div>
-                    <div>{{ antiPassoire.title }}</div>
-                    <p>
-                        {{ antiPassoire.text|striptags|raw > 50
-                            ? antiPassoire.text|striptags|raw|slice(0, 51)|split(' ')|slice(0, -1)|join(' ') ~ '…'
-                            : antiPassoire.text|striptags|raw }}
-                    </p>
-                </a>
-            </li>
-        {% endfor %}
-        </ul>
+                        <div class="antipassoire-title">{{ antiPassoire.title }}</div>
+                        <p class="antipassoire-excerpt">
+                            {{ antiPassoire.text|striptags|raw > 80
+                                ? antiPassoire.text|striptags|raw|slice(0, 81)|split(' ')|slice(0, -1)|join(' ') ~ '…'
+                                : antiPassoire.text|striptags|raw }}
+                        </p>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
         {% if totalFound > searchLimit %}
         <ul id="pagination" class="pagination">
             {% for pageNumber in paginationHelper %}
