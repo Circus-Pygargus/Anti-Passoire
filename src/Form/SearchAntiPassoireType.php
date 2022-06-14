@@ -49,7 +49,7 @@ class SearchAntiPassoireType extends AbstractType
                 'label' => false,
                 'required' => false,
                 'attr' => [
-                    'placeholder' => 'Entrez un ou plusieurs mots clés'
+                    'placeholder' => 'Entre un ou plusieurs mots clés'
                 ]
             ])
             ->add('Rechercher', SubmitType::class, [
