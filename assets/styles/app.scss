@@ -53,6 +53,7 @@ header {
             transition: all .5s;
 
             &:hover {
+                color: #FF8800;
                 background-color: whitesmoke;
                 border: 1px solid whitesmoke;
             }
@@ -127,6 +128,10 @@ main {
             .btn {
                 margin-left: 19%;
                 color: dimgray;
+
+                &:hover {
+                    color: #FF8800;
+                }
             }
         }
     }
@@ -334,13 +339,12 @@ form {
     &.btn-create,
     &.btn-submit {
         color: whitesmoke;
-        //background-color: dimgray;
         background-color: inherit;
         border-color: whitesmoke;
         transition: all .5s;
 
         &:hover {
-            color: dimgray;
+            color: #FF8800;
             background-color: whitesmoke;
             border-color: whitesmoke;
         }
