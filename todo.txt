@@ -1,3 +1,4 @@
+TODOS :
 _ recherche infructueuse :
     afficher un truc du genre :
      Pas de résultats, change de catégorie ou choisis d'autres mots clés ...
@@ -5,6 +6,9 @@ _ recherche infructueuse :
 _ recherche :
     - ajouter un champ 'Trier par' (date création, dernière édition, nbr de vue ...)
         en profiter pour cacher par défaut cette partie + le champ de nbr par page
+
+_ affichage un antiPassoire :
+    - ajouter Créé le et dernière édition (si différent)
 
 _ flashMessage :
     - faire !!
@@ -17,4 +21,3 @@ _ faire les pages 404, 503 ...
 
 
 BUGS :
-_ après édition, voici le flashMassage : La catégorie JS a bien été créée.

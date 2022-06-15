@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[STYLE] Modif marges div de contenu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/antipassoire/list.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/category/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/list.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655201211742</updated>
-      <workItem from="1655201214695" duration="38944000" />
+      <workItem from="1655201214695" duration="39489000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -270,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655250131043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="[STYLE] Modif marges div de contenu">
+      <created>1655250943805</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1655250943805</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +307,7 @@
     <MESSAGE value="[STYLE] Searcher : ajout style résultats Searcher" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User" />
-    <option name="LAST_COMMIT_MESSAGE" value="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User" />
+    <MESSAGE value="[STYLE] Modif marges div de contenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="[STYLE] Modif marges div de contenu" />
   </component>
 </project>
