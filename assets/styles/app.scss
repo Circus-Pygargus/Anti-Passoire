@@ -416,7 +416,7 @@ form {
 
         &.tee {
             &::before {
-                content: '→';
+                content: '→';/* → */
                 position: absolute;
                 top: 27px;
                 transform: rotate(-30deg);
