@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[CONTENT] Remplacement des 'anti passoire' par 'aide' sauf le titre du site">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT][FRONT] Mise en place custom select fonctionnel + style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -176,6 +176,11 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\wamp64\www\AntiPassoire\assets\js\seracher" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -191,6 +196,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655201211742</updated>
       <workItem from="1655201214695" duration="40116000" />
+      <workItem from="1655284376660" duration="41805000" />
+      <workItem from="1655374235719" duration="31516000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -283,7 +290,35 @@
       <option name="project" value="LOCAL" />
       <updated>1655251667268</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="[REFACTO][JS] Refacto pagination en l'incluant dans Searcher">
+      <created>1655339004680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1655339004680</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[WIP] [FEAT][FRONT] Mise en place custom select">
+      <created>1655339101794</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1655339101794</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[FEAT][FRONT] Mise en place custom select fonctionnel + style">
+      <created>1655408273231</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1655408273231</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[FEAT][FRONT] Mise en place custom select fonctionnel + style">
+      <created>1655412734441</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1655412734441</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +334,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas" />
@@ -313,6 +349,9 @@
     <MESSAGE value="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User" />
     <MESSAGE value="[STYLE] Modif marges div de contenu" />
     <MESSAGE value="[CONTENT] Remplacement des 'anti passoire' par 'aide' sauf le titre du site" />
-    <option name="LAST_COMMIT_MESSAGE" value="[CONTENT] Remplacement des 'anti passoire' par 'aide' sauf le titre du site" />
+    <MESSAGE value="[REFACTO][JS] Refacto pagination en l'incluant dans Searcher" />
+    <MESSAGE value="[WIP] [FEAT][FRONT] Mise en place custom select" />
+    <MESSAGE value="[FEAT][FRONT] Mise en place custom select fonctionnel + style" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT][FRONT] Mise en place custom select fonctionnel + style" />
   </component>
 </project>

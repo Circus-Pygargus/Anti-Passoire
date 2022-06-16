@@ -20,13 +20,15 @@ class SearchAntiPassoireType extends AbstractType
         $builder
             ->add('category', EntityType::class, [
                 'required' => false,
-                'label' => 'Catégories',
+                'label' => 'Catégorie',
                 'class' => Category::class,
                 'query_builder' => function (CategoryRepository $monsterRepository) {
                     return $monsterRepository->createQueryBuilder('c')
                         ->orderBy('c.label', 'ASC');
                 },
                 'choice_label' => 'label',
+                'empty_data' => '',
+                'placeholder' => 'Toutes',
                 'expanded' => false,
                 'multiple' => false
             ])
