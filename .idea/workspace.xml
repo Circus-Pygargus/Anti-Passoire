@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[STYLE] Searcher : ajout style résultats Searcher">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +197,7 @@
       <workItem from="1655201214695" duration="40116000" />
       <workItem from="1655284376660" duration="41805000" />
       <workItem from="1655374235719" duration="31516000" />
-      <workItem from="1655453979807" duration="5271000" />
+      <workItem from="1655453979807" duration="7948000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655412734441</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire">
+      <created>1655465478362</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1655465478362</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +351,6 @@
     <MESSAGE value="[style] Modif disposition message d'accueil" />
     <MESSAGE value="[CONTENU] Searcher : ajout d'un message général de résultat de recherche" />
     <MESSAGE value="[STYLE] Searcher : ajout style résulats Searcher" />
-    <MESSAGE value="[STYLE] Searcher : ajout style résultats Searcher" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User" />
     <MESSAGE value="[STYLE] Modif marges div de contenu" />
@@ -352,6 +358,8 @@
     <MESSAGE value="[REFACTO][JS] Refacto pagination en l'incluant dans Searcher" />
     <MESSAGE value="[WIP] [FEAT][FRONT] Mise en place custom select" />
     <MESSAGE value="[FEAT][FRONT] Mise en place custom select fonctionnel + style" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT][FRONT] Mise en place custom select fonctionnel + style" />
+    <MESSAGE value="[STYLE] Searcher : ajout style résultats Searcher" />
+    <MESSAGE value="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire" />
   </component>
 </project>

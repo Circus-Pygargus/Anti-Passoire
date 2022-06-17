@@ -27,11 +27,11 @@ class AntiPassoireController extends AbstractController
     }
     
     /**
-     * @Route("/admin/antipassoire/list", name="admin_antipassoire_list")
+     * @Route("/contribute/antipassoire/list", name="admin_antipassoire_list")
      */
     public function list(AntiPassoireRepository $antiPassoireRepository): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
         
         $antiPassoires = $antiPassoireRepository->findAll();
         
@@ -41,8 +41,8 @@ class AntiPassoireController extends AbstractController
     }
     
     /**
-     * @Route("/admin/antipassoire/create", name="admin_antipassoire_create")
-     * @Route("/admin/antipassoire/edit/{slug}", name="admin_antipassoire_edit")
+     * @Route("/contribute/antipassoire/create", name="admin_antipassoire_create")
+     * @Route("/contribute/antipassoire/edit/{slug}", name="admin_antipassoire_edit")
      */
     public function edit(
         Request $request,
@@ -50,7 +50,7 @@ class AntiPassoireController extends AbstractController
         string $slug = null
     ): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
         
         $return = null;
 

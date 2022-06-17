@@ -28,11 +28,11 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/admin/category/list", name="admin_category_list")
+     * @Route("/contribute/category/list", name="admin_category_list")
      */
     public function list(CategoryRepository $categoryRepository): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
         
         $categories = $categoryRepository->findAll();
         
@@ -42,8 +42,8 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @Route("/admin/category/create", name="admin_category_create")
-     * @Route("/admin/category/edit/{slug}", name="admin_category_edit")
+     * @Route("/contribute/category/create", name="admin_category_create")
+     * @Route("/contribute/category/edit/{slug}", name="admin_category_edit")
      */
     public function edit(
         Request $request,
@@ -51,7 +51,7 @@ class CategoryController extends AbstractController
         string $slug = null
     ): Response
     {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+        $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
 
         $return = null;
 
