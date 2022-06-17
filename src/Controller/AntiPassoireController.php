@@ -24,9 +24,14 @@ class AntiPassoireController extends AbstractController
             throw $this->createNotFoundException("Cet anti passoire n'existe pas.");
         }
 
+        $form = $this->createForm(SearchAntiPassoireType::class, null, [
+            'action' => $this->generateUrl('app_home'),
+            'method' => 'POST'
+        ]);
+
         return $this->render('anti_passoire/index.html.twig', [
             'antiPassoire' => $antiPassoire,
-            'searcherForm' => $this->createForm(SearchAntiPassoireType::class)->createView()
+            'searcherForm' => $form->createView()
         ]);
     }
 }

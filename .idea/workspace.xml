@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT][FRONT] Mise en place custom select fonctionnel + style">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[STYLE] Searcher : ajout style résultats Searcher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +197,7 @@
       <workItem from="1655201214695" duration="40116000" />
       <workItem from="1655284376660" duration="41805000" />
       <workItem from="1655374235719" duration="31516000" />
+      <workItem from="1655453979807" duration="5271000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
