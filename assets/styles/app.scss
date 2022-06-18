@@ -94,6 +94,9 @@ main {
                 position: relative;
 
                 &:hover {
+                    .admin-navbar_item_label {
+                        color: #FF8800;
+                    }
 
                     & .admin-navbar_item_links {
                         display: flex;
