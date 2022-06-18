@@ -14,27 +14,24 @@ class ChangeUserRoleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('slug', TextType::class, [
+            ->add('name', TextType::class, [
                 'required' => true,
+                'label' => false,
                 'attr' => [
-                    'class' => ''
+                    'class' => 'd-none'
                 ]
             ])
             ->add('wantedBiggestRole', ChoiceType::class, [
                 'required' => true,
+                'label' => false,
                 'choices' => [
-                    'USER' => 'Utilisateur',
-                    'CONTRIBUTOR' => 'Contributeur'
+                    'Utilisateur' => 'USER',
+                    'Contributeur' => 'CONTRIBUTOR'
                 ],
                 'expanded' => false,
                 'multiple' => false,
                 'attr' => [
-                    'class' => ''
-                ]
-            ])
-            ->add('Enregistrer', SubmitType::class, [
-                'attr' => [
-                    'class' => ''
+                    'class' => 'several-custom-for-one-wanted d-none'
                 ]
             ])
         ;

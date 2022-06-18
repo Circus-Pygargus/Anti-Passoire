@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +196,7 @@
       <workItem from="1655284376660" duration="41805000" />
       <workItem from="1655374235719" duration="31516000" />
       <workItem from="1655453979807" duration="7948000" />
-      <workItem from="1655551010998" duration="13685000" />
+      <workItem from="1655551010998" duration="31955000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -341,7 +338,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655565121727</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="[FEAT] Ajout Route admin_user_list + préparation formulaire de modification de rôle utilisateur">
+      <created>1655568032162</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1655568032162</updated>
+    </task>
+    <task id="LOCAL-00022" summary="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users">
+      <created>1655594499379</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1655594499379</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +389,8 @@
     <MESSAGE value="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire" />
     <MESSAGE value="[CONTENT] Admin navbar : ajout des liens list et create de catégorie et d'aide" />
     <MESSAGE value="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create" />
+    <MESSAGE value="[FEAT] Ajout Route admin_user_list + préparation formulaire de modification de rôle utilisateur" />
+    <MESSAGE value="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
   </component>
 </project>

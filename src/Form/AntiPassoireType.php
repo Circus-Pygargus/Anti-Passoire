@@ -50,7 +50,10 @@ class AntiPassoireType extends AbstractType
                 'empty_data' => '',
                 'expanded' => false,
                 'multiple' => true,
-                'placeholder' => 'Choisis une catégorie'
+                'placeholder' => 'Choisis une catégorie',
+                'attr' => [
+                    'class' => 'custom-select-wanted'
+                ]
             ])
             ->add('text', CKEditorType::class, [
 //                'config_name' => 'my_config',

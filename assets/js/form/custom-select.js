@@ -1,7 +1,7 @@
 import '../../styles/form/custom-select.scss';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const selects = document.querySelectorAll('select');
+    const selects = document.querySelectorAll('select.custom-select-wanted');
     const customSelects = [];
 
     const getRelativeSelect = (item) => {
@@ -79,9 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     item.remove();
                 }
             });
-            if (createNewItem) {
-                customSelectDisplayer.appendChild(createCustomSelectDisplayerItem(event.target.dataset.value, event.target.innerHTML));
-            }
+            if (createNewItem) customSelectDisplayer.appendChild(createCustomSelectDisplayerItem(event.target.dataset.value, event.target.innerHTML));
         } else {
             select.value = event.target.dataset.value;
             // select.onChange();

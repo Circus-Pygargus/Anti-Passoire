@@ -30,7 +30,10 @@ class SearchAntiPassoireType extends AbstractType
                 'empty_data' => '',
                 'placeholder' => 'Toutes',
                 'expanded' => false,
-                'multiple' => false
+                'multiple' => false,
+                'attr' => [
+                    'class' => 'custom-select-wanted'
+                ]
             ])
             ->add('searchLimit', ChoiceType::class, [
                 'required' => true,
@@ -42,7 +45,10 @@ class SearchAntiPassoireType extends AbstractType
                     '50' => 50
                 ],
                 'expanded' => false,
-                'multiple' => false
+                'multiple' => false,
+                'attr' => [
+                    'class' => 'custom-select-wanted'
+                ]
             ])
             ->add('pageNumber', HiddenType::class, [
                 'required' => false,
