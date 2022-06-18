@@ -77,7 +77,7 @@ main {
     .left-col {
 
         .admin-navbar {
-            ul {
+            &_item_list {
                 display: block;
                 text-align: center;
                 width: 256px;
@@ -88,20 +88,69 @@ main {
                 background-color: darkgrey;
                 border: 1px solid #555555;
                 border-radius: 10px;
+            }
 
-                li {
+            &_item {
+                position: relative;
 
-                    a {
-                        color: dimgray;
-                        transition: color .5s;
+                &:hover {
 
-                        &:hover {
-                            color: #FF8800;
-                        }
+                    & .admin-navbar_item_links {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
 
-                        &:active {
-                            color: whitesmoke;
-                        }
+                &_label {
+                    cursor: pointer;
+                    color: dimgray;
+                    transition: color .5s;
+
+                    &:hover {
+                        color: #FF8800;
+                    }
+
+                    &:active {
+                        color: whitesmoke;
+                    }
+                }
+
+                &_links {
+                    display: none;
+                    position: absolute;
+                    bottom: -12px;
+                    //left: 10px;
+                    width: 100%;
+
+                    &:hover {
+                        //display: block;
+                    }
+                }
+
+                &_link {
+                    display: inline-block;
+                    width: 35%;
+                    height: 2rem;
+                    text-align: center;
+                    line-height: 2rem;
+                    font-size: 1.5rem;
+                    color: dimgrey;
+                    background-color: whitesmoke;
+
+                    &:hover {
+                        color: #FF8800;
+                    }
+
+                    &:first-child {
+                        border-right: 1px solid darkgrey;
+                        border-top-left-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                    }
+
+                    &:last-child {
+                        border-left: 1px solid darkgrey;
+                        border-top-right-radius: 4px;
+                        border-bottom-right-radius: 4px;
                     }
                 }
             }

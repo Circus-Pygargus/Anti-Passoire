@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +202,7 @@
       <workItem from="1655284376660" duration="41805000" />
       <workItem from="1655374235719" duration="31516000" />
       <workItem from="1655453979807" duration="7948000" />
+      <workItem from="1655551010998" duration="3401000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>

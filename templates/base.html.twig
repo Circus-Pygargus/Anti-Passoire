@@ -37,11 +37,28 @@
 
         <main>
             <div class="left-col">
-                {% if is_granted('ROLE_ADMIN') %}
+                {% if is_granted('ROLE_CONTRIBUTOR') %}
                 <nav class="admin-navbar">
-                    <ul>
-                        <li>
-                            <a href="{{ path('app_admin') }}">Gestion</a>
+                    <ul class="admin-navbar_item_list">
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <li class="admin-navbar_item">
+                            <a class="admin-navbar_item_label" href="{{ path('app_admin') }}">Gestion</a>
+                        </li>
+                        {% endif %}
+
+                        <li class="admin-navbar_item">
+                            <div class="admin-navbar_item_label">Categories</div>
+                            <div class="admin-navbar_item_links">
+                                <a class="admin-navbar_item_link" href="{{ path('admin_category_list') }}">Liste</a>
+                                <a class="admin-navbar_item_link" href="{{ path('admin_category_create') }}">Créer</a>
+                            </div>
+                        </li>
+                        <li class="admin-navbar_item">
+                            <div class="admin-navbar_item_label">Aides</div>
+                            <div class="admin-navbar_item_links">
+                                <a class="admin-navbar_item_link" href="{{ path('admin_antipassoire_list') }}">Liste</a>
+                                <a class="admin-navbar_item_link" href="{{ path('admin_antipassoire_create') }}">Créer</a>
+                            </div>
                         </li>
 
                         {% block navbarList %}{% endblock %}

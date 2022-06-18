@@ -21,6 +21,7 @@ _ faire les pages 404, 503 ...
 _ changer le titre 'Création d'un anti passoire'
     en profiter pour changer 'Texte *' par Contenu
 
+_ ajouter l'envoi d'email
 
 
 BUGS :
