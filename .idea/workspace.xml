@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +199,7 @@
       <workItem from="1655284376660" duration="41805000" />
       <workItem from="1655374235719" duration="31516000" />
       <workItem from="1655453979807" duration="7948000" />
-      <workItem from="1655551010998" duration="3401000" />
+      <workItem from="1655551010998" duration="13685000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -330,7 +327,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655465478362</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="[CONTENT] Admin navbar : ajout des liens list et create de catégorie et d'aide">
+      <created>1655554837934</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1655554837934</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create">
+      <created>1655565121727</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1655565121727</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +376,8 @@
     <MESSAGE value="[FEAT][FRONT] Mise en place custom select fonctionnel + style" />
     <MESSAGE value="[STYLE] Searcher : ajout style résultats Searcher" />
     <MESSAGE value="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] Searcher : fonctionne maintenant même si affiché dans la page de display d'un antiPassoire" />
+    <MESSAGE value="[CONTENT] Admin navbar : ajout des liens list et create de catégorie et d'aide" />
+    <MESSAGE value="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create" />
   </component>
 </project>

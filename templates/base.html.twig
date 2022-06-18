@@ -42,7 +42,7 @@
                     <ul class="admin-navbar_item_list">
                         {% if is_granted('ROLE_ADMIN') %}
                         <li class="admin-navbar_item">
-                            <a class="admin-navbar_item_label" href="{{ path('app_admin') }}">Gestion</a>
+                            <a class="admin-navbar_item_label" href="{{ path('admin_user_list') }}">Utilisateurs</a>
                         </li>
                         {% endif %}
 
