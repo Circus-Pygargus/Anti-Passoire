@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\AntiPassoire;
 use App\Form\AntiPassoireType;
+use App\Form\ChangeAntiPassoireIsPublishedType;
 use App\Repository\AntiPassoireRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -34,9 +35,15 @@ class AntiPassoireController extends AbstractController
         $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
         
         $antiPassoires = $antiPassoireRepository->findAll();
+
+        $changeIsPublishedForm = $this->createForm(ChangeAntiPassoireIsPublishedType::class, null, [
+            'action' => $this->generateUrl('admin_user_change_is_published'),
+            'method' => 'POST',
+        ]);
         
         return $this->render('admin/antipassoire/list.html.twig', [
-            'antiPassoires' => $antiPassoires
+            'antiPassoires' => $antiPassoires,
+            'changeIsPublishedForm' => $changeIsPublishedForm->createView()
         ]);
     }
     
@@ -91,5 +98,39 @@ class AntiPassoireController extends AbstractController
             ])
             : $return
         ;
+    }
+
+    /**
+     * @Route("admin/user/change-is-published", name="admin_user_change_is_published")
+     */
+    public function changeIsPublished (Request $request, AntiPassoireRepository $antiPassoireRepository): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $form = $this->createForm(ChangeAntiPassoireIsPublishedType::class, null);
+        $wantedIsPublishedForm = $form->handleRequest($request);
+
+        if ($wantedIsPublishedForm->isSubmitted() && $wantedIsPublishedForm->isValid()) {
+            try {
+                $antiPassoireToEdit = $antiPassoireRepository->findOneBy(['slug' => $wantedIsPublishedForm->get('slug')->getData()]);
+                if ($antiPassoireToEdit === null) {
+                    $this->logger->warning('Un petit malin modifie le contenu des data-name des boutons de modifications d\'antiPassoire isPublished !');
+                } else {
+                    $antiPassoireToEdit->setIsPublished($wantedIsPublishedForm->get('isPublished')->getData());
+                    $this->em->persist($antiPassoireToEdit);
+                    $this->em->flush();
+                    $successMessage =  $antiPassoireToEdit->getIsPublished()
+                        ? "L'aide '" . $antiPassoireToEdit->getTitle() . " est maintenant visible sur le site."
+                        : "L'aide '" . $antiPassoireToEdit->getTitle() . "' n'est plus visible sur le site.";
+                    $this->addFlash('success', $successMessage);
+                }
+            } catch (\Exception $exception) {
+                $this->logger->error($exception->getMessage());
+                $this->logger->debug($exception->getTraceAsString());
+                $this->addFlash('error', "Un problème est survenu pendant l'enregistrement");
+            }
+        }
+
+        return $this->redirectToRoute('admin_antipassoire_list');
     }
 }

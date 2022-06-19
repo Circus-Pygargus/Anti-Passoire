@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Un admin peut décider si un anti passoire est publié ou non">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +178,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\wamp64\www\AntiPassoire\templates\_layouts" />
       <recent name="H:\wamp64\www\AntiPassoire\assets\js\seracher" />
     </key>
   </component>
@@ -200,7 +201,7 @@
       <workItem from="1655374235719" duration="31516000" />
       <workItem from="1655453979807" duration="7948000" />
       <workItem from="1655551010998" duration="31955000" />
-      <workItem from="1655630801074" duration="1778000" />
+      <workItem from="1655630801074" duration="21029000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -370,7 +371,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655631162233</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[ENTITY] AntiPassoire : ajout de la propriété isPublished">
+      <created>1655633586047</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655633586047</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[REFACTO] refacto des layouts twig dans template/_layouts">
+      <created>1655634381449</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655634381449</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[FEAT] Un admin peut décider si un anti passoire est publié ou non">
+      <created>1655670508771</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655670508771</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +431,9 @@
     <MESSAGE value="[FIX] Admin navbar : le label change de couleur si hover sur un des liens list et create" />
     <MESSAGE value="[FEAT] Ajout Route admin_user_list + préparation formulaire de modification de rôle utilisateur" />
     <MESSAGE value="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
+    <MESSAGE value="[ENTITY] AntiPassoire : ajout de la propriété isPublished" />
+    <MESSAGE value="[REFACTO] refacto des layouts twig dans template/_layouts" />
+    <MESSAGE value="[FEAT] Un admin peut décider si un anti passoire est publié ou non" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Un admin peut décider si un anti passoire est publié ou non" />
   </component>
 </project>

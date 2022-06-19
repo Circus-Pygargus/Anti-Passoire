@@ -358,6 +358,31 @@ table {
                     &:hover {
                         color: #FF8800;
                     }
+
+                    &.is-published-custom-checkbox {
+                        width: 16px;
+                        height: 16px;
+                        background-color: whitesmoke;
+                        border-radius: 4px;
+
+                        &.published::after {
+                            display: inline-block;
+                            content: '';
+                            position: relative;
+                            right: -2px;
+                            bottom: 4px;
+                            width: 8px;
+                            height: 3px;
+                            border: 2px solid #FF8800;
+                            border-top-color: transparent;
+                            border-right-color: transparent;
+                            transform: rotate(-50deg);
+                        }
+
+                        &:not(.is-admin) {
+                            cursor: initial;
+                        }
+                    }
                 }
             }
         }

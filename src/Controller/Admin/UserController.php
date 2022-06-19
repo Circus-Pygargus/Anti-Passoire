@@ -60,7 +60,6 @@ class UserController extends AbstractController
                     $this->logger->warning('Un petit malin modifie le contenu des data-name des boutons de modifications de rôle utilisateur !');
                 } else {
                     $wantedRole = $wantedRoleForm->get('wantedBiggestRole')->getData();
-//                    dd($userToEdit->setRoles(['ROLE_' . $wantedRole]));
                     $wantedRole !== 'USER'
                         ? $userToEdit->setRoles(['ROLE_' . $wantedRole])
                         : $userToEdit->setRoles([])
@@ -73,7 +72,6 @@ class UserController extends AbstractController
                 $this->logger->error($exception->getMessage());
                 $this->logger->debug($exception->getTraceAsString());
                 $this->addFlash('error', "Un problème est survenu pendant l'enregistrement");
-                dd($exception);
             }
         }
 

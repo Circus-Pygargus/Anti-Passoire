@@ -7,6 +7,7 @@ use App\Entity\Category;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -51,6 +52,17 @@ class AntiPassoireType extends AbstractType
                 'expanded' => false,
                 'multiple' => true,
                 'placeholder' => 'Choisis une catégorie',
+                'attr' => [
+                    'class' => 'custom-select-wanted'
+                ]
+            ])
+            ->add('isPublished', ChoiceType::class, [
+                'required' => true,
+                'label' => 'Publié',
+                'choices' => [
+                    'Oui' => true,
+                    'Non' => false
+                ],
                 'attr' => [
                     'class' => 'custom-select-wanted'
                 ]

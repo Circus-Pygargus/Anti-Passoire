@@ -42,7 +42,8 @@ class AntiPassoireRepository extends ServiceEntityRepository
 
     public function search(?string $keyWords, ?Category $category, int $page, int $limit): ?array
     {
-        $query = $this->createQueryBuilder('a');
+        $query = $this->createQueryBuilder('a')
+        ->where('a.isPublished = 1');
         if($keyWords != null){
             $query->andWhere('MATCH_AGAINST(a.title, a.text) AGAINST (:keyWords boolean)>0')
                 ->setParameter('keyWords', $keyWords);

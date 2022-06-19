@@ -5,6 +5,10 @@
 
     {% include 'admin/_layouts/flash_message.html.twig' %}
 
+    {% if is_granted('ROLE_ADMIN') %}
+        {{ form(changeIsPublishedForm) }}
+    {% endif %}
+
     <a class="btn btn-create" href="{{ path('admin_antipassoire_create') }}">Créer une aide</a>
 
     {% if antiPassoires|length > 0 %}
@@ -16,6 +20,7 @@
                 <th>Créateur</th>
                 <th>Date Création</th>
                 <th>Dernière date édition</th>
+                <th>Publié</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -38,6 +43,15 @@
                 <td>{{ antiPassoire.createdAt|date('d / m / Y', 'Europe/Paris') }}</td>
                 <td>{{ antiPassoire.updatedAt|date('d / m / Y', 'Europe/Paris') }}</td>
                 <td>
+                    <div class="sof-form-activator is-published-custom-checkbox
+                            {% if antiPassoire.isPublished %}published{% endif %}
+                            {% if is_granted('ROLE_ADMIN') %}is-admin{% endif %}
+                        "
+                         data-slug="{{ antiPassoire.slug }}"
+                         data-is-published-wanted="{{ antiPassoire.isPublished ? '0' : '1' }}"
+                    ></div>
+                </td>
+                <td>
                     <a class="btn-admin-action"
                        href="{{ path('admin_antipassoire_edit', {slug: antiPassoire.slug}) }}"
                     >
@@ -51,6 +65,13 @@
         </tbody>
     </table>
     {% else %}
-    <p>Il n'y a pas d'anti passoire enregistrés</p>
+    <p>Il n'y a pas d'aide enregistrée.</p>
     {% endif %}
+
+    {% include '_layouts/confirmation-modal.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('sfo-antipassoire-is-published-autofill') }}
 {% endblock %}

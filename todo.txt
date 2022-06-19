@@ -21,12 +21,15 @@ _ faire les pages 404, 503 ...
 _ changer le titre 'Création d'un anti passoire'
     en profiter pour changer 'Texte *' par Contenu
 
-_ mixin pour screen > 1600, faire comme un gros zoom sur cette
+_ mixin pour screen > 1600, reprendre avec une base de 1600 de large
 
 _ /admin/user/list : ajouter un spinner de chargement si bouton de confirmation de modif de rôle cliqué
     car la page est un peu longue à recharger
 
 _ ajouter l'envoi d'email
+
+_ s'occupper des AntiPassoire::displayNbr et ::lastDisplay, des mots clés pour les metadatas aussi
+    en gros revoir pour afficher tout le contenu ..
 
 
 BUGS :
