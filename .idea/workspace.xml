@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users" />
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AntiPassoire.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,6 +200,7 @@
       <workItem from="1655374235719" duration="31516000" />
       <workItem from="1655453979807" duration="7948000" />
       <workItem from="1655551010998" duration="31955000" />
+      <workItem from="1655630801074" duration="1778000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -352,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655594499379</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users">
+      <created>1655630927048</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1655630927048</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[FEAT] Ajout modification de rôle utilisateur depuis la page listant les users">
+      <created>1655631162233</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655631162233</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

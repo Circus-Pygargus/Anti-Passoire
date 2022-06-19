@@ -86,10 +86,16 @@ class AntiPassoire
      */
     private $contributors;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublished;
+
     public function __construct()
     {
         $this->categories = new ArrayCollection();
         $this->contributors = new ArrayCollection();
+        $this->isPublished = true;
     }
 
     public function getId(): ?int
@@ -235,6 +241,18 @@ class AntiPassoire
     public function removeContributor(User $contributor): self
     {
         $this->contributors->removeElement($contributor);
+
+        return $this;
+    }
+
+    public function getIsPublished(): bool
+    {
+        return $this->isPublished;
+    }
+
+    public function setIsPublished(bool $isPublished): self
+    {
+        $this->isPublished = $isPublished;
 
         return $this;
     }
