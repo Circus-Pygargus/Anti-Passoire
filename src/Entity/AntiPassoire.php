@@ -16,6 +16,16 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  */
 class AntiPassoire
 {
+    const ORDER_BY_POSSIBILITIES = [
+        'Nonbre de vues' => 'displayNb',
+        'Date de création' => 'createdAt',
+        'Dernière édition' => 'updatedAt'
+    ];
+    const ORDER_DIRECTION_POSSIBILITIES = [
+        'Montant' => 'ASC',
+        'Descendant' => 'DESC'
+    ];
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -87,7 +97,7 @@ class AntiPassoire
     private $contributors;
 
     /**
-     * @ORM\Column(type="boolean")
+     * @ORM\Column(type="boolean", options={"default"=true})
      */
     private $isPublished;
 
