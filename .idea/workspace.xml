@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[ENTITY] + [FIX] AntiPassoire : Ajout constantes pour les requêtes du searcher (orderBy et orderDirection) + fix annotation ORM pour $isPublished (pas de soucis plus tard lors d'un make:migration)">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Searcher : Ajout des champs orderBy et orderDirection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/form/custom-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/form/custom-select.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/form/custom-select.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SearchAntiPassoireType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AntiPassoireRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/_layouts/searcher.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_layouts/searcher.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +210,7 @@
       <workItem from="1655453979807" duration="7948000" />
       <workItem from="1655551010998" duration="31955000" />
       <workItem from="1655630801074" duration="25426000" />
-      <workItem from="1655725453382" duration="16484000" />
+      <workItem from="1655725453382" duration="27138000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -437,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655743841024</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="[FEAT] Searcher : Ajout des champs orderBy et orderDirection">
+      <created>1655749895986</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1655749895986</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,7 +472,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FEAT] Ajout système de pagination à la recherche d'anti passoire" />
     <MESSAGE value="[FIX] Rébus : ajout d'une flèche pour mieux indiquer le tee" />
     <MESSAGE value="[FIX] Searcher : modif placeholder" />
     <MESSAGE value="[style] Modif disposition message d'accueil" />
@@ -491,6 +496,7 @@
     <MESSAGE value="[FEAT] AntiPassoire : l'affichage d'une aide modifie et enregistre la date de dernière vue et le nombre de vues" />
     <MESSAGE value="[FEAT] AntiPassoire : page admin listant les aides : affichage date de dernière vue et le nombre de vues" />
     <MESSAGE value="[ENTITY] + [FIX] AntiPassoire : Ajout constantes pour les requêtes du searcher (orderBy et orderDirection) + fix annotation ORM pour $isPublished (pas de soucis plus tard lors d'un make:migration)" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ENTITY] + [FIX] AntiPassoire : Ajout constantes pour les requêtes du searcher (orderBy et orderDirection) + fix annotation ORM pour $isPublished (pas de soucis plus tard lors d'un make:migration)" />
+    <MESSAGE value="[FEAT] Searcher : Ajout des champs orderBy et orderDirection" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Searcher : Ajout des champs orderBy et orderDirection" />
   </component>
 </project>

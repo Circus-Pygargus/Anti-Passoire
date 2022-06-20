@@ -1,4 +1,22 @@
+{# Le champ de recherche d'anti passoire par mots clés#}
 <div class="search">
-    {# Le champ de recherche d'anti passoire par mots clés#}
-    {{ form(searcherForm) }}
+    <div class="displayer-btn"></div>
+    {{ form_start(searcherForm) }}
+    {{ form_row(searcherForm.category) }}
+    <div class="hideable hidden">
+        {{ form_row(searcherForm.searchLimit) }}
+        {{ form_row(searcherForm.orderBy) }}
+        <div>
+            {{ form_label(searcherForm.orderDirection) }}
+            <div class="radio-group">
+                {% for item in searcherForm.orderDirection.children  %}
+                    {{ form_row(item) }}
+                {% endfor %}
+            </div>
+        </div>
+        {{ form_row(searcherForm.pageNumber) }}
+    </div>
+    {{ form_row(searcherForm.keyWords) }}
+    {{ form_row(searcherForm.Rechercher) }}
+    {{ form_end(searcherForm) }}
 </div>

@@ -70,7 +70,10 @@ class SearchAntiPassoireType extends AbstractType
                 'multiple' => false,
                 'attr' => [
                     'class' => 'custom-radio-wanted'
-                ]
+                ],
+                'label_attr' => [
+                    'class' => 'custom-radio-group-label'
+                 ]
             ])
             ->add('pageNumber', HiddenType::class, [
                 'required' => false,

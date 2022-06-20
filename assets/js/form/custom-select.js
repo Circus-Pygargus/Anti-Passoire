@@ -2,10 +2,20 @@ import '../../styles/form/custom-select.scss';
 
 document.addEventListener("DOMContentLoaded", () => {
     // pas vraiment en rapport mais il y a des * juste après les labels des boutons radio
-    const radioButtonsLabels = document.querySelectorAll('input[type="radio"] + label');
+    const radioButtonsLabels = document.querySelectorAll('.radio-group div label');
     radioButtonsLabels.forEach(radioBtnLabel => {
         radioBtnLabel.classList.remove('required');
     });
+    // Rien à voir non plus ...
+    const searcher = document.querySelector('.search');
+    if (searcher) {
+        const displayerBtn = document.querySelector('.displayer-btn');
+        const hideableDisplayer = searcher.querySelector('.hideable');
+        displayerBtn.addEventListener('click', () => {
+            searcher.classList.toggle('opened');
+            hideableDisplayer.classList.toggle('hidden');
+        });
+    }
 
     const selects = document.querySelectorAll('select.custom-select-wanted');
     const customSelects = [];

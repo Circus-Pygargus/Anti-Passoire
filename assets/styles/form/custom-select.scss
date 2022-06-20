@@ -8,7 +8,7 @@ select {
 
 .custom-select {
     position: relative;
-    width: 12rem;
+    width: calc(86% + 2rem);
     margin-bottom: 1rem;
     color: dimgrey;
 
@@ -149,9 +149,14 @@ select {
     }
 }
 
-div.custom-radio-wanted {
+.radio-group {
 
-    & label {
-        display: inline-block;
+    label,
+    input {
+        cursor: pointer;
+    }
+
+    .custom-radio-group-label {
+        margin-bottom: 2px;
     }
 }
