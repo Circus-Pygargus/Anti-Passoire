@@ -40,7 +40,14 @@ class AntiPassoireRepository extends ServiceEntityRepository
         }
     }
 
-    public function search(?string $keyWords, ?Category $category, int $page, int $limit): ?array
+    public function search(
+        ?string $keyWords,
+        ?Category $category,
+        string $orderBy,
+        string $orderDirection,
+        int $page,
+        int $limit
+    ): ?array
     {
         $query = $this->createQueryBuilder('a')
         ->where('a.isPublished = 1');
@@ -54,6 +61,7 @@ class AntiPassoireRepository extends ServiceEntityRepository
                 ->setParameter('category', $category)
             ;
         }
+        $query->orderBy('a.' . $orderBy, $orderDirection);
         $query->setFirstResult(($page * $limit) - $limit)
             ->setMaxResults($limit)
         ;

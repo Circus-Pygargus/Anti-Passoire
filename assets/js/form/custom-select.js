@@ -1,6 +1,12 @@
 import '../../styles/form/custom-select.scss';
 
 document.addEventListener("DOMContentLoaded", () => {
+    // pas vraiment en rapport mais il y a des * juste après les labels des boutons radio
+    const radioButtonsLabels = document.querySelectorAll('input[type="radio"] + label');
+    radioButtonsLabels.forEach(radioBtnLabel => {
+        radioBtnLabel.classList.remove('required');
+    });
+
     const selects = document.querySelectorAll('select.custom-select-wanted');
     const customSelects = [];
 

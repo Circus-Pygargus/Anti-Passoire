@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\AntiPassoire;
 use App\Entity\Category;
 use App\Repository\CategoryRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -48,6 +49,27 @@ class SearchAntiPassoireType extends AbstractType
                 'multiple' => false,
                 'attr' => [
                     'class' => 'custom-select-wanted'
+                ]
+            ])
+            ->add('orderBy', ChoiceType::class, [
+                'label' => 'Trier par',
+                'required' => true,
+                'choices' => AntiPassoire::ORDER_BY_POSSIBILITIES,
+                'expanded' => false,
+                'multiple' => false,
+                'attr' => [
+                    'class' => 'custom-select-wanted'
+                ]
+            ])
+            ->add('orderDirection', ChoiceType::class, [
+                'label' => 'Ordre',
+                'required' => true,
+                'choices' => AntiPassoire::ORDER_DIRECTION_POSSIBILITIES,
+                'data' => AntiPassoire::ORDER_DIRECTION_POSSIBILITIES['Descendant'],
+                'expanded' => true,
+                'multiple' => false,
+                'attr' => [
+                    'class' => 'custom-radio-wanted'
                 ]
             ])
             ->add('pageNumber', HiddenType::class, [

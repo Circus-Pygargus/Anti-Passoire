@@ -179,6 +179,12 @@ main {
             input {
                 width: 86%;
                 margin-top: 16px;
+
+                &[type="radio"] {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    accent-color: #FF8800;
+                }
             }
 
             .btn {

@@ -10,9 +10,6 @@ _ recherche :
 _ affichage un antiPassoire :
     - ajouter Créé le et dernière édition (si différent)
 
-_ flashMessage :
-    - faire !!
-
 _ page liées à User (login, enregistrement, modif pwd) :
     - revoir les vues
 
@@ -28,7 +25,9 @@ _ /admin/user/list : ajouter un spinner de chargement si bouton de confirmation 
 
 _ ajouter l'envoi d'email
 
-_ s'occupper des AntiPassoire::displayNbr et ::lastDisplay, des mots clés pour les metadatas aussi
+_ s'occupper des AntiPassoire
+    ::displayNbr et ::lastDisplay   FAIT
+    des mots clés pour les metadatas aussi
     en gros revoir pour afficher tout le contenu ..
 
 
@@ -36,3 +35,9 @@ BUGS :
 _ colonne de gauche, si le pointeur descend plus bas que le milieu des boutons list et créer de Catégorie :
     on se retrouve avec les liens des aides activés
     -> revoir les tailles des div et ajouter des marges
+
+_ Searcher : revoir pour le compte du résultat total pour la pagination
+    on ne sélectionne plus que les isPublished
+    du coup, la dernière page est vide
+
+_ Il n'y a plus de custom select dans la page de création d'aide !!! ??? !!!

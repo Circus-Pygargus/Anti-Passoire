@@ -148,3 +148,10 @@ select {
         }
     }
 }
+
+div.custom-radio-wanted {
+
+    & label {
+        display: inline-block;
+    }
+}

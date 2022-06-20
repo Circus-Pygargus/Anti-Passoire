@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Form\SearchAntiPassoireType;
 use App\Repository\AntiPassoireRepository;
 use App\Service\Pagination\PaginationService;
+use App\Service\Validator\SearcherOrderValidator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -30,12 +31,14 @@ class HomeController extends AbstractController
         $form = $this->createForm(SearchAntiPassoireType::class);
         $search = $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid() && SearcherOrderValidator::isOrderValid($search)) {
             $searchLimit = $search->get('searchLimit')->getData();
             $page = $search->get('pageNumber')->getData();
             $antiPassoires = $antiPassoireRepository->search(
                 $search->get('keyWords')->getData(),
                 $search->get('category')->getData(),
+                $search->get('orderBy')->getData(),
+                $search->get('orderDirection')->getData(),
                 $page,
                 $searchLimit
             );
