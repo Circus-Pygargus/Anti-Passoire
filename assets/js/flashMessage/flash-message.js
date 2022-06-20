@@ -1,49 +1,14 @@
-/**
- * Sends notification to user
- *
- * @param {string} status should be 'info' 'success' or 'error'
- * @param {string} message The notification to send
- */
-console.log('totoz')
-// const sendNotification = (status, message) => {
 document.addEventListener("DOMContentLoaded", () => {
     let flashMessageDuration = 4000;
-
-    // const mainDiv = document.querySelector('main');
-    // // Create the notification
-    // const notifDiv = document.createElement('div');
-    // // just for if status doesn't exists
-    // switch(status) {
-    //     case 'info': break;
-    //     case 'success': break;
-    //     case 'error': break;
-    //     default: {
-    //         // Stop and call an error notification ;)
-    //         return sendNotification('error', 'Il y a un problème avec le type de notification !');
-    //     }
-    // }
-    // // build visual and animation, type will change background color
-    // notifDiv.classList.add('notification', `notif-${status}`);
-    //
-    // // Include the message
-    // const notifText = document.createElement('p');
-    // notifText.classList.add('notif-text');
-    // notifText.innerText = message;
-    //
-    // // Insert in DOM
-    // notifDiv.appendChild(notifText);
-    // mainDiv.appendChild(notifDiv);
     const flashMessageContainers = document.querySelectorAll('div.alert[role="alert"]');
     const mainDiv = document.querySelector('.content');
 
     flashMessageContainers.forEach(flashMessageContainer => {
 
-        // will remove notif from DOM in a short time
         const animTimeOut = setTimeout(() => {
             mainDiv.removeChild(flashMessageContainer);
         }, flashMessageDuration + 1000);
 
-        // User can pause the animation to have some extra time to read the notification, a second click will remove the notification
         flashMessageContainer.addEventListener('click', (e) => {
             const notif = e.target.tagName === 'DIV' ? e.target : e.target.parentNode;
 
