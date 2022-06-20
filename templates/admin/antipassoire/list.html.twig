@@ -18,8 +18,10 @@
                 <th>Nom</th>
                 <th>Catégories</th>
                 <th>Créateur</th>
-                <th>Date Création</th>
-                <th>Dernière date édition</th>
+                <th>Création</th>
+                <th>Dernière édition</th>
+                <th>Nbr vues</th>
+                <th>Dernière vue</th>
                 <th>Publié</th>
                 <th>Actions</th>
             </tr>
@@ -40,8 +42,16 @@
                 {% endfor %}
                 </td>
                 <td>{{ antiPassoire.creator.username }}</td>
-                <td>{{ antiPassoire.createdAt|date('d / m / Y', 'Europe/Paris') }}</td>
-                <td>{{ antiPassoire.updatedAt|date('d / m / Y', 'Europe/Paris') }}</td>
+                <td>{{ antiPassoire.createdAt|date('d-m-y', 'Europe/Paris') }}</td>
+                <td>{% if antiPassoire.updatedAt != antiPassoire.createdAt %}
+                        {{ antiPassoire.updatedAt|date('d-m-y', 'Europe/Paris') }}
+                    {% endif %}
+                </td>
+                <td>{{ antiPassoire.displayNb }}</td>
+                <td>{% if antiPassoire.lastDisplay %}
+                        {{ antiPassoire.lastDisplay|date('d-m-y', 'Europe/Paris') }}
+                    {% endif %}
+                </td>
                 <td>
                     <div class="sof-form-activator is-published-custom-checkbox
                             {% if antiPassoire.isPublished %}published{% endif %}
