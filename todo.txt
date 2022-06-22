@@ -33,9 +33,5 @@ _ s'occupper des AntiPassoire
 
 BUGS :
 
-_ Searcher : revoir pour le compte du résultat total pour la pagination
-    on ne sélectionne plus que les isPublished
-    du coup, la dernière page est vide
-
 _ pas forcément un bug, mais truc chiant :
     searcher -> requête -> bouton revient sur plus même si sur - avant requête

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
-    </list>
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +203,7 @@
       <workItem from="1655551010998" duration="31955000" />
       <workItem from="1655630801074" duration="25426000" />
       <workItem from="1655725453382" duration="28453000" />
-      <workItem from="1655904861897" duration="1489000" />
+      <workItem from="1655904861897" duration="1826000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -454,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655905648205</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="[FIX] Searcher : correction soucis entre un hover sur le bas des liens vers la création de catégorie et un hover sur le label 'Aides'">
+      <created>1655906490390</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1655906490390</updated>
+    </task>
+    <task id="LOCAL-00037" summary="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination">
+      <created>1655906667468</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1655906667468</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,8 +493,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[style] Modif disposition message d'accueil" />
-    <MESSAGE value="[CONTENU] Searcher : ajout d'un message général de résultat de recherche" />
     <MESSAGE value="[STYLE] Searcher : ajout style résulats Searcher" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover" />
     <MESSAGE value="[STYLE] Boutons : color orange on hover + ajout classe btn-submit aux boutons liés à User" />
@@ -508,6 +516,8 @@
     <MESSAGE value="[FEAT] Searcher : Ajout des champs orderBy et orderDirection" />
     <MESSAGE value="[FEAT] Searcher : Modif structure html + ajout bouton pour montrer cacher les champs d'options de recherche" />
     <MESSAGE value="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche" />
+    <MESSAGE value="[FIX] Searcher : correction soucis entre un hover sur le bas des liens vers la création de catégorie et un hover sur le label 'Aides'" />
+    <MESSAGE value="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination" />
   </component>
 </project>

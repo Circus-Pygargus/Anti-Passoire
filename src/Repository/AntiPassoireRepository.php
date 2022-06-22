@@ -72,7 +72,8 @@ class AntiPassoireRepository extends ServiceEntityRepository
     public function getTotalForResarch(?string $keyWords, ?Category $category): int
     {
         $query = $this->createQueryBuilder('a')
-            ->select('COUNT(a)');
+            ->select('COUNT(a)')
+            ->where('a.isPublished = 1');
 
         if($keyWords != null){
             $query->andWhere('MATCH_AGAINST(a.title, a.text) AGAINST (:keyWords boolean)>0')
