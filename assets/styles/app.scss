@@ -86,7 +86,7 @@ main {
                 display: block;
                 text-align: center;
                 width: 256px;
-                line-height: 80px;
+                line-height: 40px;
                 font-size: 2rem;
                 margin-top: 16px;
                 padding: 16px;
@@ -97,6 +97,8 @@ main {
 
             &_item {
                 position: relative;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
 
                 &:hover {
                     .admin-navbar_item_label {
@@ -126,13 +128,8 @@ main {
                 &_links {
                     display: none;
                     position: absolute;
-                    bottom: -12px;
-                    //left: 10px;
+                    bottom: -32px;
                     width: 100%;
-
-                    &:hover {
-                        //display: block;
-                    }
                 }
 
                 &_link {

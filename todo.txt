@@ -32,15 +32,10 @@ _ s'occupper des AntiPassoire
 
 
 BUGS :
-_ colonne de gauche, si le pointeur descend plus bas que le milieu des boutons list et créer de Catégorie :
-    on se retrouve avec les liens des aides activés
-    -> revoir les tailles des div et ajouter des marges
 
 _ Searcher : revoir pour le compte du résultat total pour la pagination
     on ne sélectionne plus que les isPublished
     du coup, la dernière page est vide
-
-_ Il n'y a plus de custom select dans la page de création d'aide !!! ??? !!!
 
 _ pas forcément un bug, mais truc chiant :
     searcher -> requête -> bouton revient sur plus même si sur - avant requête

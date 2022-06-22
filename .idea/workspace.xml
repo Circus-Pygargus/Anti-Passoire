@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Searcher : Modif structure html + ajout bouton pour montrer cacher les champs d'options de recherche">
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
@@ -207,7 +207,7 @@
       <workItem from="1655551010998" duration="31955000" />
       <workItem from="1655630801074" duration="25426000" />
       <workItem from="1655725453382" duration="28453000" />
-      <workItem from="1655904861897" duration="727000" />
+      <workItem from="1655904861897" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -447,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655764016356</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche">
+      <created>1655905648205</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1655905648205</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +483,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[FIX] Searcher : modif placeholder" />
     <MESSAGE value="[style] Modif disposition message d'accueil" />
     <MESSAGE value="[CONTENU] Searcher : ajout d'un message général de résultat de recherche" />
     <MESSAGE value="[STYLE] Searcher : ajout style résulats Searcher" />
@@ -501,6 +507,7 @@
     <MESSAGE value="[ENTITY] + [FIX] AntiPassoire : Ajout constantes pour les requêtes du searcher (orderBy et orderDirection) + fix annotation ORM pour $isPublished (pas de soucis plus tard lors d'un make:migration)" />
     <MESSAGE value="[FEAT] Searcher : Ajout des champs orderBy et orderDirection" />
     <MESSAGE value="[FEAT] Searcher : Modif structure html + ajout bouton pour montrer cacher les champs d'options de recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="[FEAT] Searcher : Modif structure html + ajout bouton pour montrer cacher les champs d'options de recherche" />
+    <MESSAGE value="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] Div de contenu : ne change plus de taille lors d'un clic sur le + du module de recherche" />
   </component>
 </project>
