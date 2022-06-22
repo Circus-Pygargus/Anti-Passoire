@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FEAT] Searcher : Modif structure html + ajout bouton pour montrer cacher les champs d'options de recherche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/flashMessage/flash-message.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/flashMessage/flash-message.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/form/custom-select.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/form/custom-select.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +207,7 @@
       <workItem from="1655551010998" duration="31955000" />
       <workItem from="1655630801074" duration="25426000" />
       <workItem from="1655725453382" duration="28453000" />
+      <workItem from="1655904861897" duration="727000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>

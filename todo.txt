@@ -42,7 +42,5 @@ _ Searcher : revoir pour le compte du résultat total pour la pagination
 
 _ Il n'y a plus de custom select dans la page de création d'aide !!! ??? !!!
 
-_ la div .content change de taille lorsque l'on clic sur le bouton + du searcher
-
 _ pas forcément un bug, mais truc chiant :
     searcher -> requête -> bouton revient sur plus même si sur - avant requête
