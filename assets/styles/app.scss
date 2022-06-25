@@ -464,10 +464,18 @@ form {
     textarea {
         width: auto;
         padding: 16px;
-        border-width: 0;
+        border-width: 1px;
         border-style: solid;
         border-color: whitesmoke;
         border-radius: 8px;
+
+        &:hover {
+            border-color: #FF8800;
+        }
+
+        &:focus-visible {
+            outline-color: #FF8800;
+        }
     }
 
     input {
@@ -475,6 +483,14 @@ form {
         height: 32px;
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    // ckeditor
+    #cke_anti_passoire_text {
+        &:hover,
+        &.cke_focus {
+            border-color: #FF8800;
+        }
     }
 }
 

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination" />
+    <list default="true" id="5f33f280-842b-4d9a-9d5c-d6409106e827" name="Changes" comment="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,7 +206,9 @@
       <workItem from="1655551010998" duration="31955000" />
       <workItem from="1655630801074" duration="25426000" />
       <workItem from="1655725453382" duration="28453000" />
-      <workItem from="1655904861897" duration="1826000" />
+      <workItem from="1655904861897" duration="2507000" />
+      <workItem from="1656084978206" duration="1235000" />
+      <workItem from="1656146702643" duration="837000" />
     </task>
     <task id="LOCAL-00001" summary="[FIX] Route app_antipassoire_show : renvoie une 404 si l'anti passoire demandé n'existe pas">
       <created>1655203143935</created>
@@ -464,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655906667468</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="[FIX] Searcher : correction comptage du nombre total de résultats pour la pagination">
+      <created>1655906714012</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1655906714012</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
