@@ -43,6 +43,11 @@ class Category
      */
     private $antiPassoires;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=CategoryGroup::class, inversedBy="categories")
+     */
+    private $categoryGroup;
+
     public function __construct()
     {
         $this->antiPassoires = new ArrayCollection();
@@ -112,6 +117,18 @@ class Category
         if ($this->antiPassoires->removeElement($antiPassoire)) {
             $antiPassoire->removeCategory($this);
         }
+
+        return $this;
+    }
+
+    public function getCategoryGroup(): ?CategoryGroup
+    {
+        return $this->categoryGroup;
+    }
+
+    public function setCategoryGroup(?CategoryGroup $categoryGroup): self
+    {
+        $this->categoryGroup = $categoryGroup;
 
         return $this;
     }

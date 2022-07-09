@@ -61,10 +61,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $ContributedAntiPassoires;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=CategoryGroup::class, inversedBy="users")
+     */
+    private $categoryGroups;
+
     public function __construct()
     {
         $this->createdAntiPassoires = new ArrayCollection();
         $this->ContributedAntiPassoires = new ArrayCollection();
+        $this->categoryGroups = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -228,6 +234,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         if ($this->ContributedAntiPassoires->removeElement($contributedAntiPassoire)) {
             $contributedAntiPassoire->removeContributor($this);
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, CategoryGroup>
+     */
+    public function getCategoryGroups(): Collection
+    {
+        return $this->categoryGroups;
+    }
+
+    public function addCategoryGroup(CategoryGroup $categoryGroup): self
+    {
+        if (!$this->categoryGroups->contains($categoryGroup)) {
+            $this->categoryGroups[] = $categoryGroup;
+        }
+
+        return $this;
+    }
+
+    public function removeCategoryGroup(CategoryGroup $categoryGroup): self
+    {
+        $this->categoryGroups->removeElement($categoryGroup);
 
         return $this;
     }

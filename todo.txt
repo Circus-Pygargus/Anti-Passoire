@@ -3,10 +3,6 @@ _ recherche infructueuse :
     afficher un truc du genre :
      Pas de résultats, change de catégorie ou choisis d'autres mots clés ...
 
-_ recherche :
-    - ajouter un champ 'Trier par' (date création, dernière édition, nbr de vue ...)
-        en profiter pour cacher par défaut cette partie + le champ de nbr par page
-
 _ affichage un antiPassoire :
     - ajouter Créé le et dernière édition (si différent)
 
