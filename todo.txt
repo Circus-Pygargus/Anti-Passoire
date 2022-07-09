@@ -26,6 +26,9 @@ _ s'occupper des AntiPassoire
     des mots clés pour les metadatas aussi
     en gros revoir pour afficher tout le contenu ..
 
+_ à la suppression d'un CategoryGroup, les catégories associées passent dans le groupe public ? sont supprimée ?
+    Faire une pop up listant les catégories pour laisser le choix ?
+
 
 BUGS :
 
