@@ -27,6 +27,20 @@ class CategoryGroupController extends AbstractController
     }
 
     /**
+     * @Route("/contribute/category-group/list", name="admin_category_group_list")
+     */
+    public function list(CategoryGroupRepository $categoryGroupRepository): Response
+    {
+        $this->denyAccessUnlessGranted('ROLE_CONTRIBUTOR');
+
+        $categoryGroups = $categoryGroupRepository->findAllForUser();
+
+        return $this->render('admin/category_group/list.html.twig', [
+            'categoryGroups' => $categoryGroups
+        ]);
+    }
+
+    /**
      * @Route("/contribute/category-group/create", name="admin_category_group_create")
      * @Route("/contribute/category-group/edit/{slug}", name="admin_category_group_edit")
      */
@@ -47,7 +61,7 @@ class CategoryGroupController extends AbstractController
         if (!$categoryGroup) {
             $this->addFlash('error', 'Le groupe de catégories <strong>' . $slug . '</strong> n\'existe pas');
 
-            $return = $this->redirectToRoute('app_admin');
+            $return = $this->redirectToRoute('admin_category_group_list');
         }
 
         $form = $this->createForm(CategoryGroupType::class, $categoryGroup);
@@ -58,13 +72,13 @@ class CategoryGroupController extends AbstractController
                 $this->em->persist($categoryGroup);
                 $this->em->flush();
                 $this->addFlash('success', 'Le groupe de catégories <strong>' . $categoryGroup->getLabel() . '</strong> a bien été créé.');
-                $return = $this->redirectToRoute('app_admin');
+                $return = $this->redirectToRoute('admin_category_group_list');
             } catch (\Exception $exception) {
                 $this->logger->error($exception->getMessage());
                 $this->logger->debug($exception->getTraceAsString());
 
                 $this->addFlash('error', 'Un problème est survenu, le groupe de catégories n\'a pas été créé !');
-                $return = $this->redirectToRoute('app_admin');
+                $return = $this->redirectToRoute('admin_category_group_list');
             }
         }
 
