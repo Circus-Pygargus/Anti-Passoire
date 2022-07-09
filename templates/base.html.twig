@@ -47,6 +47,13 @@
                         {% endif %}
 
                         <li class="admin-navbar_item">
+                            <div class="admin-navbar_item_label">Groupes</div>
+                            <div class="admin-navbar_item_links">
+                                <a class="admin-navbar_item_link" href="{{ path('admin_category_group_list') }}">Liste</a>
+                                <a class="admin-navbar_item_link" href="{{ path('admin_category_group_create') }}">Créer</a>
+                            </div>
+                        </li>
+                        <li class="admin-navbar_item">
                             <div class="admin-navbar_item_label">Categories</div>
                             <div class="admin-navbar_item_links">
                                 <a class="admin-navbar_item_link" href="{{ path('admin_category_list') }}">Liste</a>
