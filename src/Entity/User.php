@@ -66,11 +66,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $categoryGroups;
 
+    /**
+     * @ORM\OneToMany(targetEntity=CategoryGroup::class, mappedBy="creator")
+     */
+    private $categoryGroupsCreated;
+
     public function __construct()
     {
         $this->createdAntiPassoires = new ArrayCollection();
         $this->ContributedAntiPassoires = new ArrayCollection();
         $this->categoryGroups = new ArrayCollection();
+        $this->categoryGroupsCreated = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -258,6 +264,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function removeCategoryGroup(CategoryGroup $categoryGroup): self
     {
         $this->categoryGroups->removeElement($categoryGroup);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, CategoryGroup>
+     */
+    public function getCategoryGroupsCreated(): Collection
+    {
+        return $this->categoryGroupsCreated;
+    }
+
+    public function addCategoryGroupsCreated(CategoryGroup $categoryGroupsCreated): self
+    {
+        if (!$this->categoryGroupsCreated->contains($categoryGroupsCreated)) {
+            $this->categoryGroupsCreated[] = $categoryGroupsCreated;
+            $categoryGroupsCreated->setCreator($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCategoryGroupsCreated(CategoryGroup $categoryGroupsCreated): self
+    {
+        if ($this->categoryGroupsCreated->removeElement($categoryGroupsCreated)) {
+            // set the owning side to null (unless already changed)
+            if ($categoryGroupsCreated->getCreator() === $this) {
+                $categoryGroupsCreated->setCreator(null);
+            }
+        }
 
         return $this;
     }

@@ -39,6 +39,11 @@ class CategoryGroup
     private $categories;
 
     /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="categoryGroupsCreated")
+     */
+    private $creator;
+
+    /**
      * @ORM\ManyToMany(targetEntity=User::class, mappedBy="categoryGroups")
      */
     private $users;
@@ -104,6 +109,18 @@ class CategoryGroup
                 $category->setCategoryGroup(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCreator(): ?User
+    {
+        return $this->creator;
+    }
+
+    public function setCreator(?User $creator): self
+    {
+        $this->creator = $creator;
 
         return $this;
     }
