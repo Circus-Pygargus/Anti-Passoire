@@ -50,7 +50,7 @@ class AntiPassoireType extends AbstractType
 //                'disabled' => true, // already completed, will stay the same even if user tries to change it
                 'empty_data' => '',
                 'expanded' => false,
-                'multiple' => true,
+                'multiple' => false,
                 'placeholder' => 'Choisis une catégorie',
                 'attr' => [
                     'class' => 'custom-select-wanted'
