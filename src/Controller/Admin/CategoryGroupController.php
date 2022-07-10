@@ -69,6 +69,11 @@ class CategoryGroupController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             try {
+                if ($isNew) {
+                    $categoryGroup
+                        ->setCreator($this->getUser())
+                        ->addUser($this->getUser());
+                }
                 $this->em->persist($categoryGroup);
                 $this->em->flush();
                 $this->addFlash('success', 'Le groupe de catégories <strong>' . $categoryGroup->getLabel() . '</strong> a bien été créé.');
