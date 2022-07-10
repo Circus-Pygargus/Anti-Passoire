@@ -19,7 +19,12 @@
             <tbody>
                 {% for categoryGroup in categoryGroups %}
                     <tr>
-                        <td>{{ categoryGroup.label }}</td>
+                        <td>{% if 'Privé' in categoryGroup.label %}
+                                Privé
+                            {% else %}
+                                {{ categoryGroup.label }}
+                            {% endif %}
+                        </td>
                         <td>{{ categoryGroup.categories|length }}</td>
                         <td>
                             <a class="btn-admin-action"
