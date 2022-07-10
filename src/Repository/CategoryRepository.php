@@ -4,7 +4,9 @@ namespace App\Repository;
 
 use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\Security\Core\Security;
 
 /**
  * @extends ServiceEntityRepository<Category>
@@ -16,9 +18,15 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class CategoryRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    private $security;
+
+    public function __construct(
+        ManagerRegistry $registry,
+        Security $security
+    )
     {
         parent::__construct($registry, Category::class);
+        $this->security = $security;
     }
 
     public function add(Category $entity, bool $flush = false): void
@@ -37,6 +45,25 @@ class CategoryRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    public function getQueryBuilderForSearcherType(): QueryBuilder
+    {
+        return $this->createQueryBuilder('c')
+            ->innerJoin('c.categoryGroup', 'cg')
+            ->leftJoin('cg.creator', 'creator')
+            ->leftJoin('cg.users', 'user')
+
+            ->where('cg.slug LIKE :categoryGroupPrivateSlug AND creator = :user')
+            ->orWhere('cg.slug = :categoryGroupPublicSlug')
+            ->orWhere('user = :user')
+
+            ->setParameter('categoryGroupPrivateSlug', 'prive-%')
+            ->setParameter('categoryGroupPublicSlug', 'public')
+            ->setParameter('user', $this->security->getUser())
+
+            ->orderBy('cg.label', 'ASC')
+            ->addOrderBy('c.label', 'ASC');
     }
 
 //    /**

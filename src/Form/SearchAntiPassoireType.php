@@ -16,6 +16,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SearchAntiPassoireType extends AbstractType
 {
+    private $categoryRepository;
+
+    public function __construct(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -23,9 +30,8 @@ class SearchAntiPassoireType extends AbstractType
                 'required' => false,
                 'label' => 'Catégorie',
                 'class' => Category::class,
-                'query_builder' => function (CategoryRepository $monsterRepository) {
-                    return $monsterRepository->createQueryBuilder('c')
-                        ->orderBy('c.label', 'ASC');
+                'query_builder' => function (CategoryRepository $categoryRepository) {
+                    return $categoryRepository->getQueryBuilderForSearcherType();
                 },
                 'choice_label' => 'label',
                 'empty_data' => '',
