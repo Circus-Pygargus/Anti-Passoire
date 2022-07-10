@@ -2,7 +2,9 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\CategoryGroup;
 use App\Form\ChangeUserRoleType;
+use App\Repository\CategoryGroupRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -47,7 +49,11 @@ class UserController extends AbstractController
     /**
      * @Route("admin/user/role/edit", name="admin_user_role_edit")
      */
-    public function editUserRole (Request $request, UserRepository $userRepository): Response
+    public function editUserRole (
+        Request $request,
+        UserRepository $userRepository,
+        CategoryGroupRepository $categoryGroupRepository
+    ): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
@@ -65,6 +71,17 @@ class UserController extends AbstractController
                         : $userToEdit->setRoles([])
                     ;
                     $this->em->persist($userToEdit);
+
+                    if ($wantedRole === 'CONTRIBUTOR') {
+                        if (!$categoryGroupRepository->findOneBy(['label' => '_Privé_%', 'creator' => $userToEdit])) {
+                            $categoryGroup = new CategoryGroup();
+                            $categoryGroup
+                                ->setLabel(\uniqid('_Privé_', true) . \random_int(0, 10^9))
+                                ->setCreator($userToEdit);
+                            $this->em->persist($categoryGroup);
+                        }
+                    }
+
                     $this->em->flush();
                     $this->addFlash('success', $userToEdit->getUserIdentifier() . " à maintenant le ROLE_$wantedRole");
                 }
