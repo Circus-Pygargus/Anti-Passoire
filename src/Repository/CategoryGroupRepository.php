@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\CategoryGroup;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\Security\Core\Security;
 
@@ -48,35 +49,22 @@ class CategoryGroupRepository extends ServiceEntityRepository
 
     public function findAllForUser(): array
     {
-        $categoryGroups = [];
-        $categoryGroups[] = $this->getPublic();
-        \array_merge($categoryGroups, $this->getAllForUser());
+        $query = $this->getQueryBuilderForCategoryEdition();
 
-        return $categoryGroups;
+        return $query->getQuery()->getresult();
     }
 
-    private function getPublic(): ?CategoryGroup
+    private function getQueryBuilderForCategoryEdition(): QueryBuilder
     {
-        $query = $this->createQueryBuilder('cg')
-            ->where('cg.slug = :catGroupSlug')
-            ->setParameter('catGroupSlug', 'public')
-        ;
-
-        return $query->getQuery()->getsingleResult();
-    }
-
-    private function getAllForUser(): ?array
-    {
-        $query = $this->createQueryBuilder('cg');
-        // Already checked that user has at least ROLE_CONTRIBUTOR in controller
-        if (!$this->security->isGranted('ROLE_ADMIN')) {
-            $query->leftJoin('cg.users', 'user')
-                ->andWhere('user = :user')
-                ->setParameter('user', $this->security->getUser())
-            ;
-        }
-
-        return $query->getQuery()->getResult();
+        return $this->createQueryBuilder('cg')
+            ->leftJoin('cg.users', 'user')
+            ->where('cg.slug LIKE :categoryGroupPrivateSlug AND cg.creator = :user')
+            ->orWhere('cg.slug LIKE :categoryGroupPublicSlug')
+            ->orWhere('user = :user')
+            ->setParameter('categoryGroupPrivateSlug', 'prive-%')
+            ->setParameter('categoryGroupPublicSlug', 'public')
+            ->setParameter('user', $this->security->getUser())
+            ->orderBy('cg.label', 'ASC');
     }
 
 //    /**
