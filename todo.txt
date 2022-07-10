@@ -26,9 +26,20 @@ _ s'occupper des AntiPassoire
     des mots clés pour les metadatas aussi
     en gros revoir pour afficher tout le contenu ..
 
-_ à la suppression d'un CategoryGroup, les catégories associées passent dans le groupe public ? sont supprimée ?
+_ à la suppression d'un CategoryGroup, les catégories associées passent dans le groupe public ? sont supprimées ?
     Faire une pop up listant les catégories pour laisser le choix ?
 
+_ liste de groupes de catégories : coller un formulaire pour les boutons d'édition
+
+_ CategoryGroup :
+    - Ajouter la colonne isLabelEditable (pour Public et _Privée_...)
+        ou peut pet-être etre fait^dans le formType avec un disabled sur une fonction qui checke
+    - Ajouter la colonne comment ou explainationText plutôt,
+        pour garder comments pour l'ajout futur des commentaires
+    - Interdire la création ayant comme label Public ou commençant par un mot contenant privé ou prive (après lowercase)
+        -> utiliser le slug =)
+
+!! _ trouver un moyen d'ajouter le groupe privé à l'admin (moi) en prod
 
 BUGS :
 

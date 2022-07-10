@@ -109,7 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const customSelectDisplayerItem = document.createElement('LI');
         customSelectDisplayerItem.classList.add('custom-select-selected-item');
         customSelectDisplayerItem.dataset.value = value;
-        customSelectDisplayerItem.innerHTML = displayedText;
+        customSelectDisplayerItem.innerHTML = displayedText.startsWith('Privé_')
+            ? 'Privé'
+            : displayedText;
         customSelectDisplayerItem.addEventListener('click', customSelectDisplayerItemClicked);
         return customSelectDisplayerItem;
     };
@@ -139,7 +141,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 const customOption = document.createElement('LI');
                 customOption.classList.add('custom-select-option');
                 customOption.dataset.value = option.value;
-                customOption.innerHTML = option.innerHTML;
+                if (option.innerHTML.startsWith('_Privé_')) {
+                    customOption.innerHTML = 'Privé'
+                    customOption.title = "Ceci est ton groupe de catégories privé.\nPersonne d'autre n'aura accès à son contenu."
+                } else {
+                    if (customOption.dataset.value) {
+                        customOption.title = option.innerHTML === 'Public'
+                            ? customOption.title = 'Le contenu de ce groupe est accessible à tous.'
+                            : customOption.title = 'Seuls les membres de se groupe verront son contenu.';
+                    }
+
+                    customOption.innerHTML = option.innerHTML;
+                }
                 customOption.addEventListener('click', customOptionClicked);
                 customOptionssBox.appendChild(customOption);
             });
