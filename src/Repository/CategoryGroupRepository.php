@@ -54,7 +54,7 @@ class CategoryGroupRepository extends ServiceEntityRepository
         return $query->getQuery()->getresult();
     }
 
-    private function getQueryBuilderForCategoryEdition(): QueryBuilder
+    public function getQueryBuilderForCategoryEdition(): QueryBuilder
     {
         return $this->createQueryBuilder('cg')
             ->leftJoin('cg.users', 'user')

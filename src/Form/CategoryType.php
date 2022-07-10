@@ -3,6 +3,9 @@
 namespace App\Form;
 
 use App\Entity\Category;
+use App\Entity\CategoryGroup;
+use App\Repository\CategoryGroupRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -23,6 +26,27 @@ class CategoryType extends AbstractType
                     new NotBlank([
                         'message' => 'Tu dois entrer un nom pour cette catégorie'
                     ])
+                ]
+            ])
+            ->add('categoryGroup', EntityType::class, [
+                'label' => 'Groupe',
+                'required' => true,
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Tu dois choisir au moins un groupe de catégories.'
+                    ])
+                ],
+                'class' => CategoryGroup::class,
+                'query_builder' => function (CategoryGroupRepository $categoryGroupRepository) {
+                return $categoryGroupRepository->getQueryBuilderForCategoryEdition();
+                },
+                'choice_label' => 'label',
+                'empty_data' => '',
+                'expanded' => false,
+                'multiple' => false,
+                'placeholder' => 'Choisis un groupe de catégories',
+                'attr' => [
+                    'class' => 'custom-select-wanted'
                 ]
             ])
             ->add('comment', TextareaType::class, [
