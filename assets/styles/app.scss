@@ -1,6 +1,6 @@
 *,
 *::before,
-*::after{
+*::after {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -190,6 +190,7 @@ main {
                     border: 1px solid whitesmoke;
                     border-radius: 50%;
                 }
+
                 &:hover::after {
                     color: #FF8800;
                 }
@@ -318,9 +319,11 @@ main {
                     &:hover {
                         border-color: #FF8800;
                     }
+
                     &:active {
                         border-color: dimgrey;
                     }
+
                     //&:hover .antipassoire-title,
                     //&:active .antipassoire-title {
                     //    color: #FF8800;
@@ -369,9 +372,9 @@ main {
                     color: inherit;
                     transition: color .5s;
 
-                     &:hover {
+                    &:hover {
                         color: #FF8800;
-                     }
+                    }
 
                     &:active {
                         color: dimgray;
@@ -456,7 +459,7 @@ form {
         margin: 16px 0 8px;
 
         &.required:after {
-            content:" *";
+            content: " *";
         }
     }
 
@@ -464,10 +467,19 @@ form {
     textarea {
         width: auto;
         padding: 16px;
-        border-width: 0;
+        border-width: 1px;
         border-style: solid;
-        border-color: whitesmoke;
+        border-color: #FF8800;
         border-radius: 8px;
+
+        &:hover {
+            border-color: #FF8800;
+        }
+
+        &:focus,
+        &:focus-within {
+            outline-color: #FF8800;
+        }
     }
 
     input {
@@ -475,6 +487,20 @@ form {
         height: 32px;
         padding-top: 0;
         padding-bottom: 0;
+    }
+
+    // ckeditor
+    #cke_anti_passoire_text {
+
+        &:hover {
+            border-color: #FF8800;
+        }
+
+        &:focus-within {
+            outline-width: 1px;
+            outline-style: solid;
+            outline-color: #FF8800;
+        }
     }
 }
 
@@ -559,10 +585,10 @@ form {
 .rebus {
     display: flex;
     align-items: center;
-    position:relative;
+    position: relative;
     color: whitesmoke;
 
-    > div {
+    >div {
         display: inline-block;
         width: 48px;
         height: 48px;
@@ -610,7 +636,8 @@ form {
 
         &.tee {
             &::before {
-                content: '→';/* → */
+                content: '→';
+                /* → */
                 position: absolute;
                 top: 27px;
                 transform: rotate(-30deg);

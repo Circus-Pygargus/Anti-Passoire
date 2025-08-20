@@ -35,3 +35,6 @@ BUGS :
 
 _ pas forcément un bug, mais truc chiant :
     searcher -> requête -> bouton revient sur plus même si sur - avant requête
+
+_ pas moyen d'avoir une outline lorsque focus sur le textarea de ckeditor (ajout d'aide)
+ c'est dans app.scss chercher #cke_anti_passoire_text
