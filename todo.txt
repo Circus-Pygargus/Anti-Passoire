@@ -46,3 +46,18 @@ _ pas forcément un bug, mais truc chiant :
 
 _ pas moyen d'avoir une outline lorsque focus sur le textarea de ckeditor (ajout d'aide)
  c'est dans app.scss chercher #cke_anti_passoire_text
+
+
+
+IDEES :
+- à la place d'antipassoire dans le site (coté front visuel sauf le titre),
+utiliser bouchon, ou souvenir ou pensée ou trace
+    - mémoire pensée souvenir
+    - cerveau placard bouchon
+    - univers pensée trace 
+    ...
+    l'idée, c'est d'avoir un parent pour les catégories afin de pouvoir créer des groupes privés
+        si je peux en plus ajouter la notion d'accès ou non à certaines catégories d'un groupe pour un membre d'un groupe, ça peut être top
+        ce serait même encore mieux si un groupe pouvait avoir des catégories privées et publiques
+        j'ai même envie d'ajouter que l'on devrait pouvoir trouver une catégorie dans plusieurs groupes
+            ex code / php, boite / php, permettant ainsi d'avoir du code privé (pas une raison pour y coller des données trop sensibles)
