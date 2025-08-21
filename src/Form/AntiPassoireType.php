@@ -58,7 +58,7 @@ class AntiPassoireType extends AbstractType
             ])
             ->add('isPublished', ChoiceType::class, [
                 'required' => true,
-                'label' => 'Publié',
+                'label' => 'Publier',
                 'choices' => [
                     'Oui' => true,
                     'Non' => false
@@ -69,7 +69,7 @@ class AntiPassoireType extends AbstractType
             ])
             ->add('text', CKEditorType::class, [
 //                'config_name' => 'my_config',
-                'label' => 'Texte',
+                'label' => 'Contenu',
                 'required' => true,
                 'constraints' => [
                     new NotBlank([
