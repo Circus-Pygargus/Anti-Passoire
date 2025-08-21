@@ -197,7 +197,8 @@ main {
             }
 
             &.opened .displayer-btn::after {
-                transform: rotate(45deg);
+                content: "-";
+                line-height: .7rem;
             }
 
             .hideable {
