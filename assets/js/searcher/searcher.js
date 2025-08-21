@@ -17,9 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (searcher) {
         const displayerBtn = document.querySelector('.displayer-btn');
         const hideableDisplayer = searcher.querySelector('.hideable');
+        const isSearcherOpenCheckbox = searcher.querySelector('#search_anti_passoire_isSearcherOpen');
+        if (isSearcherOpenCheckbox.checked) {
+            searcher.classList.add('opened');
+            hideableDisplayer.classList.remove('hidden');
+        }
+
         displayerBtn.addEventListener('click', () => {
             searcher.classList.toggle('opened');
             hideableDisplayer.classList.toggle('hidden');
+            isSearcherOpenCheckbox.checked = !isSearcherOpenCheckbox.checked;
         });
     }
 });
