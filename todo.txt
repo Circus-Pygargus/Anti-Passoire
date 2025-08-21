@@ -30,10 +30,6 @@ _ édition de catégorie ou d'antipassoire
     ajouter un bouton Annuler
     en coller un dans les pages de créations ?
 
-_ dans le module de recherche par mot clé
-    remplacer le x par un - lorsque le module est agrandi
-        le x donne l'impression que le module va être fermé
-
 _ User:
     s'occuper de is_verified
         l'ajouter dans les pages /admin/user/list et edit
