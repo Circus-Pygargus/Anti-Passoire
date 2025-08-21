@@ -3,10 +3,6 @@ _ recherche infructueuse :
     afficher un truc du genre :
      Pas de résultats, change de catégorie ou choisis d'autres mots clés ...
 
-_ recherche :
-    - ajouter un champ 'Trier par' (date création, dernière édition, nbr de vue ...)
-        en profiter pour cacher par défaut cette partie + le champ de nbr par page
-
 _ affichage un antiPassoire :
     - ajouter Créé le et dernière édition (si différent)
 
@@ -38,11 +34,18 @@ _ dans le module de recherche par mot clé
     remplacer le x par un - lorsque le module est agrandi
         le x donne l'impression que le module va être fermé
 
+_ User:
+    s'occuper de is_verified
+        l'ajouter dans les pages /admin/user/list et edit
+        s'en servir pour savoir si le user peut accéder à certaines pages ?
+            ou je le garde juste pour le changement de mot de passe ?
+
 
 BUGS :
 
 _ pas forcément un bug, mais truc chiant :
     searcher -> requête -> bouton revient sur plus même si sur - avant requête
+    je pourrais utiliser une variable comme isSearcherOpen et l'envoyer au back lors de la demande de recherche
 
 _ pas moyen d'avoir une outline lorsque focus sur le textarea de ckeditor (ajout d'aide)
  c'est dans app.scss chercher #cke_anti_passoire_text
