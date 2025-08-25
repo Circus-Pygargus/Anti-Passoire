@@ -15,6 +15,7 @@ fos_ck_editor:
             toolbar: null
             codeSnippet_theme: 'railscasts'
             codeSnippet_languages:
+                - 'bash'
                 - 'PHP'
                 - 'SQL'
                 - 'JavaScript'
