@@ -22,6 +22,7 @@ _ ajouter l'envoi d'email
 
 _ s'occupper des AntiPassoire
     ::displayNbr et ::lastDisplay   FAIT
+    dans la page admin on pourrait aussi afficher le displayNbr dans l'affichage de l'antipassoire
     des mots clés pour les metadatas aussi
     en gros revoir pour afficher tout le contenu ..
 
@@ -54,3 +55,8 @@ utiliser bouchon, ou souvenir ou pensée ou trace
         ce serait même encore mieux si un groupe pouvait avoir des catégories privées et publiques
         j'ai même envie d'ajouter que l'on devrait pouvoir trouver une catégorie dans plusieurs groupes
             ex code / php, boite / php, permettant ainsi d'avoir du code privé (pas une raison pour y coller des données trop sensibles)
+
+
+En prod :
+_ éditer l'antipassoire qui parle de méthode twig
+    et coller la commande 'php bin/console make:twig-extension' dans un code snippet 'bash'
